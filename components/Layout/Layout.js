@@ -5,7 +5,7 @@ import style from "./Layout.module.css"
 const Layout = ({children}) => {
     return (
         <div>
-            <menu className='bg-color2  h-20 pl-5 flex items-center justify-between text-white'>
+            <menu className='bg-color2  h-20 pl-5 flex items-center justify-between text-white shadow-2xl'>
                     <div className='flex items-center w-2/4'>
                         <div>
                             <Image src={logo} className='w-14'/>

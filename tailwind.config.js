@@ -16,13 +16,19 @@ module.exports = {
         "color1":"#17181d",
         "color2":"#292c35",
         "color3":"#e09145",
-        "color4":"#fcd9b8",
+        "color4":"#DBD8E3",
+        "color5":"#03C4A1",
       },
       height:{
         "200": "800px"
       },
       width:{
         "200": "800px"
+      },
+      left:{
+        "150": "500px",
+        "160": "600px",
+        "170": "700px",
       }
     },
   },
