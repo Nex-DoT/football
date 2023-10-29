@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import logo from "/public/favicon/favicon.ico";
+import style from "./Layout.module.css"
 const Layout = ({children}) => {
     return (
         <div>
@@ -10,19 +11,18 @@ const Layout = ({children}) => {
                             <Image src={logo} className='w-14'/>
                         </div>
                         <ul className='flex w-3/5 justify-between ml-7'>
-                            <li className=' cursor-pointer'>News</li>
-                            <li className=' cursor-pointer'>Home</li>
-                            <li className=' cursor-pointer'>Clubs</li>
-                            <li className=' cursor-pointer'>Player</li>
-                            <li className=' cursor-pointer'>Coach</li>
-                            <li className=' cursor-pointer'>League</li>
-                            <li className=' cursor-pointer'>Search</li>
+                            <li className=' cursor-pointer'><p className={`${style.hover-4}`}>Home</p></li>
+                            <li className=' cursor-pointer'><p className={style.hover-4}>Clubs</p></li>
+                            <li className=' cursor-pointer'><p className={style.hover-4}>Player</p></li>
+                            <li className=' cursor-pointer'><p className={style.hover-4}>Coach</p></li>
+                            <li className=' cursor-pointer'><p className={style.hover-4}>League</p></li>
+                            <li className=' cursor-pointer'><p className={style.hover-4}>Search</p></li>
                         </ul>
                     </div>
                     <div className='mr-5'>
-                        <ul className='flex'>
-                            <li className='p-2 rounded-full bg-color4 transition-colors text-black hover:bg-color3 cursor-pointer m-2'>Login</li>
+                        <ul className='flex items-center'>
                             <li className='p-2 rounded-full bg-color4 transition-colors text-black hover:bg-color3 cursor-pointer m-2'>SignUp</li>
+                            <li className='text-white cursor-pointer'>Login</li>
                         </ul>
                     </div>
             </menu>

@@ -17,6 +17,12 @@ module.exports = {
         "color2":"#292c35",
         "color3":"#e09145",
         "color4":"#fcd9b8",
+      },
+      height:{
+        "200": "800px"
+      },
+      width:{
+        "200": "800px"
       }
     },
   },
