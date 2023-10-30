@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import logo from "/public/favicon/favicon.ico";
-import style from "./Layout.module.css"
 const Layout = ({children}) => {
     return (
         <div>

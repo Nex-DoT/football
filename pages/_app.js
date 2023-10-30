@@ -1,10 +1,12 @@
 import '@/styles/globals.css'
-import Layout from '@/components/Layout/Layout'
-
+import { NextUIProvider } from '@nextui-org/react';
+import Menu from '../components/menu/Menu';
 export default function App({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps}/>
-    </Layout>
+    <NextUIProvider>
+      <Menu>
+        <Component {...pageProps}/>
+      </Menu>
+    </NextUIProvider>
   )
 }
