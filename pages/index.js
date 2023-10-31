@@ -1,16 +1,18 @@
 import Image from 'next/image'
-import HomePage from '@/components/RoutePages/HomePage'
+import HomePage from '/components/RoutePages/HomePage'
 export default function Home({result}) {
-  console.log(result);
+  console.log(result.response);
+  const England = result.response.filter(item => item.league.name === "Premier League" && item.country.name === "England"); 
+  console.log(England);
   return (
     <>
-      <HomePage/>
+      <HomePage league={England}/>
     </>
   )
 }
 // 4c1bfdd674c9406cbf36c1541631c29b API TOKEN
 export async function getServerSideProps(){
-  const url = 'https://api-football-beta.p.rapidapi.com/players/topscorers?season=2023&league=39';
+  const url = 'https://api-football-beta.p.rapidapi.com/leagues';
   const options = {
     method: 'GET',
     headers: {
@@ -22,7 +24,6 @@ export async function getServerSideProps(){
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-    console.log(result);
     return{
       props: {result}
     }

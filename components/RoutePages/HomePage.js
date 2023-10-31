@@ -1,10 +1,10 @@
 import WelcomingComponent from "../models/WelcomingComponent";
 import ListCards from "../models/ListCards";
-const HomePage = () => {
+const HomePage = ({league}) => {
     return (
         <div>
-            <WelcomingComponent></WelcomingComponent>
-            <ListCards></ListCards>
+            <WelcomingComponent ></WelcomingComponent>
+            <ListCards league={league}></ListCards>
         </div>
     );
 };
