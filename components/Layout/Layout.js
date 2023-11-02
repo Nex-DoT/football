@@ -7,7 +7,9 @@ const Layout = ({children}) => {
             <menu className='bg-color2  h-20 pl-5 flex items-center justify-between text-white shadow-2xl'>
                     <div className='flex items-center w-2/4'>
                         <div>
-                            <Image src={logo} className='w-14'/>
+                            <Image
+                                src={logo}
+                                className='w-14'/>
                         </div>
                         <ul className='flex w-3/5 justify-between ml-7'>
                             <li className=' cursor-pointer'><p className={`${style.hover-4}`}>Home</p></li>
@@ -18,7 +20,7 @@ const Layout = ({children}) => {
                             <li className=' cursor-pointer'><p className={style.hover-4}>Search</p></li>
                         </ul>
                     </div>
-                    <div className='mr-5'>
+                    <div className='mr-5'>56+
                         <ul className='flex items-center'>
                             <li className='p-2 rounded-full bg-color4 transition-colors text-black hover:bg-color3 cursor-pointer m-2'>SignUp</li>
                             <li className='text-white cursor-pointer'>Login</li>

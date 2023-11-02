@@ -16,7 +16,11 @@ const Card = ({ league }) => {
       initial="hidden"
       animate="visible"
     >
-      {/* <Image src={Url} height={90} alt={"fdsf"} width={90} /> */}
+      <Image
+          src={Url}
+          height={90}
+          alt={"fdsf"}
+          width={90} />
     </motion.div>
   );
 };
