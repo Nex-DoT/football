@@ -2,18 +2,22 @@ import scrollGif from "public/image/scroll.gif"
 import Image from "next/image";
 import Cards from "./Cards";
 const ListCards = ({league , text}) => {
-    console.log(league);
+  const England = league.filter(item => item.league.name === "Premier League" && item.country.name === "England"); 
+  const Spain = league.filter(item => item.league.name === "La Liga" && item.country.name === "Spain"); 
+  const Italy = league.filter(item => item.league.name === "Serie A" && item.country.name === "Italy"); 
+    console.log(England , Spain , Italy);
     return (
-        <div className=" bg-color2 h-96 mt-20 relative">
-            <h1 calssName=""></h1>
+        <div className=" bg-color2  mt-20 relative flex items-center justify-center flex-col">
+            <h1 className="pt-6 pb-6 text-white text-4xl font-thin italic">The World's Best Football Leagues: A Comparison </h1>
             <div className=" absolute -top-20 left-1/2 -translate-x-1/2 z-30">
                 <Image src={scrollGif} width={80} alt="scroll"/>
             </div>
-            <div className=" absolute w-56 h-56 bg-color1 rotate-45 -z-10 -top-28 -right-32"></div>
-
-            <Cards league={league}></Cards>
-            <div></div>
-            <div></div>
+            <div className=" absolute w-56 h-56 bg-gradient-to-tr from-color1 to-color2 rotate-45 -z-10 -top-28 -right-32"></div>
+            <div className="w-full flex items-center justify-evenly h-200">
+                <Cards league={England}></Cards>
+                <Cards league={Spain}></Cards>
+                <Cards league={Italy}></Cards>
+            </div>
         </div>
     );
 };

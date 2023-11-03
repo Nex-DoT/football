@@ -1,11 +1,10 @@
 import HomePage from '/components/RoutePages/HomePage'
 export default function Home({result}) {
   console.log(result.response);
-  const England = result.response.filter(item => item.league.name === "Premier League" && item.country.name === "England"); 
-  console.log(England);
+  const leagues = result.response 
   return (
     <>
-      <HomePage league={England}/>
+      <HomePage league={leagues}/>
     </>
   )
 }

@@ -23,7 +23,8 @@ module.exports = {
         "color5":"#03C4A1",
       },
       height:{
-        "200": "800px"
+        "200": "500px",
+        "150": "450px",
       },
       width:{
         "200": "800px"
