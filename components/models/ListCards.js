@@ -2,9 +2,9 @@ import scrollGif from "public/image/scroll.gif"
 import Image from "next/image";
 import Cards from "./Cards";
 const ListCards = ({league , text}) => {
-  const England = league.filter(item => item.league.name === "Premier League" && item.country.name === "England"); 
-  const Spain = league.filter(item => item.league.name === "La Liga" && item.country.name === "Spain"); 
-  const Italy = league.filter(item => item.league.name === "Serie A" && item.country.name === "Italy"); 
+  const England = league[0].filter(item => item.league.name === "Premier League" && item.country.name === "England"); 
+  const Spain = league[0].filter(item => item.league.name === "La Liga" && item.country.name === "Spain"); 
+  const Italy = league[0].filter(item => item.league.name === "Serie A" && item.country.name === "Italy"); 
     console.log(England , Spain , Italy);
     return (
         <div className=" bg-color2  mt-20 relative flex items-center justify-center flex-col shadow-xl w-screen">
