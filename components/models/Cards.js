@@ -45,7 +45,48 @@ const Card = ({ league }) => {
         </div>
       </div>
     );
-  }
+  }else{
+    const Url = league.team.logo;
+    return (
+      <div className="card w-72 flex items-center justify-center flex-col h-150 rounded-md bg-gradient-to-tr from-color1 to-zinc-800 backdrop:blur-md shadow-lg transition-all hover:scale-105">
+        <div className="flex flex-col items-center justify-center">
+          <Image
+              className={league[0].league.name === "Serie A" && "h-16 w-10"}
+              src={Url}
+              height={90}
+              alt={"fdsf"}
+              width={90} />
+              <h2 className="text-white m-auto mt-3 text-xl mb-8 font-bold">{league.team.name}</h2>
+              { league.team.name === "Barclona" 
+              && 
+              <ul className=" list-disc text-white  text-sm  ml-7 pr-2 font-thin">
+                <li>Spanish La Liga</li>
+                <li>Home to some of the biggest names in football, including Lionel Messi, Pedri, and Robert Lewandowski</li>
+                <li>Known for their attractive and attacking style of play, which has been dubbed "tiki-taka"</li>
+                <li>One of the most successful clubs in Spanish football, with 26 La Liga titles and five Champions League titles</li>
+              </ul> }
+              { league.team.name === "Real Madrid" 
+              && 
+              <ul className=" list-disc text-white  text-sm  ml-7 pr-2">
+                <li>Spanish La Liga</li>
+                <li>Winners of the 2022-23 Champions League</li>
+                <li>Home to some of the best players in the world, including Karim Benzema, Luka Modric, and Vinícius Júnior</li>
+                <li>One of the most successful clubs in football history, with 14 Champions League titles</li>
+              </ul> }
+              { league.team.name === "Manchester United" 
+              && 
+              <ul className=" list-disc text-white  text-sm  ml-7 pr-2">
+                <li>English Premier League</li>
+                <li>2021-22 Premier League runners-up</li>
+                <li>Known for their passionate fan base and their tradition of playing attacking football</li>
+                <li>One of the most successful clubs in English football, with 20 Premier League titles and three Champions League titles</li>
+              </ul> }
+              <Button className="mt-5" color="success" variant="ghost">Details</Button>
+        </div>
+      </div>
+    )
+}
+
 };
 
 export default Card;
