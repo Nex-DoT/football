@@ -1,13 +1,11 @@
-import { data } from 'autoprefixer';
 import HomePage from '/components/RoutePages/HomePage'
 export default function Home({data}) {
-  console.log(data);
-  const leagues = data;
+  const leagues = data[0].response;
   console.log(leagues);
-  const teams = [ data[1], data[2] , data[3] ];
+  const teams = [ data[1].response, data[2].response , data[3].response ];
   return (
     <>
-      {/* <HomePage league={leagues} teams={teams}/> */}
+      <HomePage league={leagues} teams={teams}/>
     </>
   )
 }
