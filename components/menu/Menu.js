@@ -39,25 +39,35 @@ export default function Menu({children}) {
   return (
     <div>
 
-        <Navbar className='bg-color1' shouldHideOnScroll>
-        <NavbarBrand>
-            <Image src={logo} className='w-14'/>
-            <p className="font-bold text-inherit text-white">FC Goal</p>
+        <Navbar className='bg-color2 h-20 bg-opacity-95' shouldHideOnScroll>
+        <NavbarBrand className='flex items-center justify-center flex-col'>
+            <Image src={logo} className='w-10'/>
+            <p className=" text-white">FC Goal</p>
         </NavbarBrand>
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
             <NavbarItem>
-            <Link color="foreground" href="#">
-                Features
-            </Link>
-            </NavbarItem>
-            <NavbarItem isActive>
-            <Link href="#" aria-current="page">
-                Customers
+            <Link href="#">
+                Home
             </Link>
             </NavbarItem>
             <NavbarItem>
-            <Link color="foreground" href="#">
-                Integrations
+            <Link href="#" aria-current="page">
+                Tabels
+            </Link>
+            </NavbarItem>
+            <NavbarItem>
+            <Link href="#">
+                Teams
+            </Link>
+            </NavbarItem>
+            <NavbarItem>
+            <Link href="#">
+                Players
+            </Link>
+            </NavbarItem>
+            <NavbarItem>
+            <Link href="news">
+                News
             </Link>
             </NavbarItem>
         </NavbarContent>
