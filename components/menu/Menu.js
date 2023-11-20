@@ -46,27 +46,27 @@ export default function Menu({children}) {
         </NavbarBrand>
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
             <NavbarItem>
-            <Link href="#">
+            <Link href="#" className='text-white'>
                 Home
             </Link>
             </NavbarItem>
             <NavbarItem>
-            <Link href="#" aria-current="page">
+            <Link href="#" className='text-white'>
                 Tabels
             </Link>
             </NavbarItem>
             <NavbarItem>
-            <Link href="#">
+            <Link href="#" className='text-white'>
                 Teams
             </Link>
             </NavbarItem>
             <NavbarItem>
-            <Link href="#">
+            <Link href="#" className='text-white'>
                 Players
             </Link>
             </NavbarItem>
             <NavbarItem>
-            <Link href="news">
+            <Link href="news" className='text-white'>
                 News
             </Link>
             </NavbarItem>

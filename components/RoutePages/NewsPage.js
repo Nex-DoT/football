@@ -1,10 +1,11 @@
 import { useState } from "react";
-
+import LeagueSelect from "../models/News/LeagueSelect";
+import Pagination1 from "../models/News/Pagination";
 const NewsPage = () => {
-    const [name , setName] = useState("La Liga");
     return (
         <div className="m-auto w-3/4">
-            <h2 className=" text-3xl">{name} News</h2>
+            <LeagueSelect></LeagueSelect>
+            <Pagination1></Pagination1>
         </div>
     );
 };
