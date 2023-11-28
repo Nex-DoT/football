@@ -51,7 +51,7 @@ export default function Menu({children}) {
             </Link>
             </NavbarItem>
             <NavbarItem>
-            <Link href="#" className='text-white'>
+            <Link href="/tabels/39" className='text-white'>
                 Tabels
             </Link>
             </NavbarItem>
@@ -66,8 +66,8 @@ export default function Menu({children}) {
             </Link>
             </NavbarItem>
             <NavbarItem>
-            <Link href="news" className='text-white'>
-                News
+            <Link href="games/1" className='text-white'>
+                Games
             </Link>
             </NavbarItem>
         </NavbarContent>
