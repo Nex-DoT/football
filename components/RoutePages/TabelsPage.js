@@ -1,9 +1,11 @@
 import LiveSelect from "../models/tabelsPage/LiveSelect";
+import TabelNew from "../models/tabelsPage/TabelNew";
 
-const TabelsPage = ({league , setLeague}) => {
+const TabelsPage = ({league , setLeague , data}) => {
     return (
         <div>
-            {/* <LiveSelect league={league} setLeague={setLeague}/> */}
+            <LiveSelect league={league} setLeague={setLeague}/>
+            <TabelNew data={data}/>
         </div>
     );
 };

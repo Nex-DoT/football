@@ -6,26 +6,26 @@ const LiveSelect = ({league , setLeague}) => {
     const router = useRouter()
     console.log(league);
     const onChangeHandeler = (e) => {
-        const text = e.target.value.split(" ") ;
-        const nText = `${text[0]}${text[1]}`
-        setLeague(nText)
+        console.log(e);
+        router.push(`/tabels/${e.target.value}`)
     };
     return (
         <div className=" flex items-center justify-around mt-10">
             <div>
-                <h1 className=" text-3xl font-semibold">Latest Games in {league.label}</h1>
+                <h1 className=" text-3xl font-semibold">Latest Tabel in {league}</h1>
                 <hr className=" border-2 rounded-md border-blue-100 mt-1"/>
             </div>
             <Select 
                 label="Select Your Favorite League" 
                 className="max-w-xs"
                 // color="primary"
-                value={league.value}
+                value={league}
                 onChange={e => onChangeHandeler(e)}
                 >
                 {leageuValue.map((animal) => (
-                <SelectItem key={animal.value[0]} value={animal.value}>
-                    {animal.value[0]}
+                <SelectItem key={animal.value} value={[animal.label , animal.value]}>
+                    {animal.label}
+                    {console.log(animal)}
                 </SelectItem>
                 ))}
             </Select>

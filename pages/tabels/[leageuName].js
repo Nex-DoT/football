@@ -8,8 +8,7 @@ const league = ({result}) => {
     console.log(result);
     return (
         <div>
-            {router.query.leagueName}
-            <TabelsPage league={league} setLeague={setLeague}/>
+            <TabelsPage data={result} league={league} setLeague={setLeague}/>
         </div>
     );
 };
@@ -18,7 +17,7 @@ export default league;
 export async function getServerSideProps({params}){
     const data = params.leageuName
     console.log(data);
-    const url = `https://api-football-beta.p.rapidapi.com/leagues?id=${data}`;
+    const url = `https://api-football-beta.p.rapidapi.com/standings?season=2023&league=${data}`;
     const options = {
         method: 'GET',
         headers: {
@@ -29,8 +28,8 @@ export async function getServerSideProps({params}){
 
     try {
         const response = await fetch(url, options);
-        const result = await response.json();
-        console.log(result);
+        const data = await response.json();
+        const result = data.response
         return{
             props:{
                 result
