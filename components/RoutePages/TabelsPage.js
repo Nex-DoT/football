@@ -4,7 +4,7 @@ import TabelNew from "../models/tabelsPage/TabelNew";
 const TabelsPage = ({league , setLeague , data}) => {
     return (
         <div>
-            <LiveSelect league={league} setLeague={setLeague}/>
+            <LiveSelect league={league} setLeague={setLeague} data={data}/>
             <TabelNew data={data}/>
         </div>
     );

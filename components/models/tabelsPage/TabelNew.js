@@ -1,28 +1,63 @@
 import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell} from "@nextui-org/react";import Card from "./Card";
+import Image from "next/image";
 const TabelNew = ({data}) => {
     const standings = data[0].league.standings[0];
     console.log(standings);
+    const columns = [
+      {
+        key: "rank",
+        label: "Rank",
+      },
+      {
+        key: "team",
+        label: "Team",
+      },
+      {
+        key: "pts",
+        label: "PTS",
+      },
+      {
+        key: "w",
+        label: "W",
+      },
+      {
+        key: "d",
+        label: "D",
+      },
+      {
+        key: "l",
+        label: "L",
+      },
+      {
+        key: "form",
+        label: "Form",
+      },
+      {
+        key: "gd",
+        label: "GD",
+      },
+    ];
     return (
-         <div className=" w-3/4 m-auto">
-            <Table aria-label="Example static collection table">
-      <TableHeader>
-        <TableColumn>Rank</TableColumn>
-        <TableColumn>Team</TableColumn>
-        <TableColumn>PTS</TableColumn>
-        <TableColumn>W</TableColumn>
-        <TableColumn>D</TableColumn>
-        <TableColumn>L</TableColumn>
-        <TableColumn>Form</TableColumn>
-        <TableColumn>GD</TableColumn>
-      </TableHeader>
-      <TableBody items={standings}>
-        {(items)=>(
-            <TableRow key={items.rank}>
-
-            </TableRow>
-        )}
-      </TableBody>
-    </Table>
+         <div className="w-full felx items-center justify-center m-auto mt-5 mb-5 pt-5 pb-5">
+            <Table className="w-3/4 m-auto" isHeaderSticky aria-label="Example table with dynamic content">
+              <TableHeader>
+                {columns.map(column => <TableColumn className=" text-start" key={column.key}>{column.label}</TableColumn>)}
+              </TableHeader>
+              <TableBody items={standings}>
+                {(items)=>(
+                    <TableRow key={items.rank}>
+                    <TableCell>{items.rank}</TableCell>
+                    <TableCell className="flex items-center justify-start"><Image className=" object-cover" src={items.team.logo} width={30} alt="logo" height={30} />{items.team.name}</TableCell>
+                    <TableCell>{items.points}</TableCell>
+                    <TableCell>{items.all.win}</TableCell>
+                    <TableCell>{items.all.draw}</TableCell>
+                    <TableCell>{items.all.lose}</TableCell>
+                    <TableCell>{items.form}</TableCell>
+                    <TableCell>{items.goalsDiff}</TableCell>
+                </TableRow>
+                )}
+              </TableBody>
+          </Table>
         </div>
     );
 };
