@@ -2,7 +2,6 @@ import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell} from "@
 import Image from "next/image";
 const TabelNew = ({data}) => {
     const standings = data[0].league.standings[0];
-    console.log(standings);
     const columns = [
       {
         key: "rank",

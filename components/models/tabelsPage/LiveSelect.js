@@ -4,10 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/router.js";
 const LiveSelect = ({league , data}) => {
     const router = useRouter()
-    console.log(league);
-    console.log(data);
     const onChangeHandeler = (e) => {
-        console.log(e);
         router.push(`/tabels/${e.target.value}`)
     };
     return (
@@ -26,7 +23,6 @@ const LiveSelect = ({league , data}) => {
                 {leageuValue.map((animal) => (
                 <SelectItem key={animal.value} value={[animal.label , animal.value]}>
                     {animal.label}
-                    {console.log(animal)}
                 </SelectItem>
                 ))}
             </Select>

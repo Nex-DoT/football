@@ -4,8 +4,7 @@ import TabelsPage from '../../components/RoutePages/TabelsPage';
 const league = ({result}) => {
     const router = useRouter();
     const {league , setLeague } = useState(router.query.leagueName);
-    console.log(router.query);
-    console.log(result);
+
     return (
         <div>
             <TabelsPage data={result} league={league} setLeague={setLeague}/>
@@ -16,7 +15,6 @@ const league = ({result}) => {
 export default league;
 export async function getServerSideProps({params}){
     const data = params.leageuName
-    console.log(data);
     const url = `https://api-football-beta.p.rapidapi.com/standings?season=2023&league=${data}`;
     const options = {
         method: 'GET',
