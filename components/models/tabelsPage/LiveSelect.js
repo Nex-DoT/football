@@ -10,7 +10,7 @@ const LiveSelect = ({league , data}) => {
     return (
         <div className=" flex items-center justify-around mt-10">
             <div>
-                <h1 className=" text-3xl font-semibold flex items-center justify-center"><img src={data[0].league.logo} className=" w-12 object-cover mr-2" alt="" /> {data[0].league.name} Tabel </h1>
+                <h1 className=" text-3xl font-semibold flex items-center justify-center"><img src={data[0].league.logo} className=" w-12 mr-2 aspect-square object-contain" alt="" /> {data[0].league.name} Tabel </h1>
                 <hr className=" border-2 rounded-md border-color2 border-opacity-50 mt-1"/>
             </div>
             <Select 

@@ -1,3 +1,4 @@
+import TextModel from "../models/TextModel";
 import LiveSelect from "../models/tabelsPage/LiveSelect";
 import TabelNew from "../models/tabelsPage/TabelNew";
 import { useRef , useState } from "react";
@@ -21,7 +22,9 @@ const TabelsPage = ({league , setLeague , data}) => {
             <button onClick={handleScroll}>اسکرول</button>
             <LiveSelect league={league} setLeague={setLeague} data={data}/>
             <TabelNew data={data}/>
-            <p ref={contentDivRef} className=" h-200" >sfsfs</p>
+            <div ref={contentDivRef} className=" h-200" >
+              <TextModel></TextModel>
+            </div>
         </div>
     );
 };
