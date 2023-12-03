@@ -1,52 +1,65 @@
 import React from 'react';
-import { Input } from '@nextui-org/react';
+import { Input , Pagination } from '@nextui-org/react';
 import { CgSearch } from "react-icons/cg";
 import { useState } from 'react';
-const LeagueListPage = () => {
-    const [data , setData] = useState({
+const LeagueListPage = ({info}) => {
+    const informationData = info.response;
+    const [data , setData] = useState({})
+    const [text , setText] = useState({
         name: "",
         country : ""
     })
-   const onChangeHandeler = (e) =>{
-        setData({...data , [e.target.name] : e.target.value})
-        console.log(data);
+    function chunkArray(array, chunkSize) {
+        let result = [];
+        for (let i = 0; i < array.length; i += chunkSize) {
+          let chunk = array.slice(i, i + chunkSize);
+          result.push(chunk);
+        }
+        return result;
+    }
+    const infoData = chunkArray(informationData , 35);
+    const onChangeHandeler = (e) =>{
+        setText({...text , [e.target.name] : e.target.value})
    }
-   const onClearHandeler = (e) =>{
-        console.log(e);
+    const OnChangeHandelerP = (e)=>{
+        setData(infoData[e])
+        console.log(data);
    }
     return (
         <div>
             <div className='flex items-center justify-center'>
                 <Input
-                    onClear={onClearHandeler}
                     onChange={(e)=>onChangeHandeler(e)}
                     name='name'
-                    value={data.name}
-                    isClearable
+                    value={text.name}
                     color='primary'
                     radius="lg"
                     className=' w-56 mt-6 mb-6 mr-4'
                     classNames=""
                     placeholder="Name"
                     startContent={
-                    <CgSearch className="" />
+                        <CgSearch className=" cursor-pointer" />
                     }
                 />
                  <Input
-                    onClear={onClearHandeler}
                     onChange={(e)=>onChangeHandeler(e)}
                     name='country'
-                    isClearable
-                    value={data.country}
+                    value={text.country}
                     color='primary'
                     radius="lg"
                     className=' w-56 mt-6 mb-6'
                     classNames=""
                     placeholder="Country"
                     startContent={
-                    <CgSearch className="w-6 h-7 cursor-pointer" onClick={(e)=> console.log(e.target)} name='country' />
+                        <CgSearch className=" cursor-pointer" onClick={(e)=> console.log(e)} name='country' />
                     }
                 />
+            </div>
+            <div className= ' max-h-screen w-full overflow-y-scroll'>
+                
+            </div>
+            <div className='flex items-center justify-center'>
+                <Pagination color='primary' isCompact showControls total={infoData.length} initialPage={1} onChange={OnChangeHandelerP} />
             </div>
         </div>
     );
