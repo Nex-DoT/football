@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input , Pagination } from '@nextui-org/react';
 import { CgSearch } from "react-icons/cg";
-import { useState } from 'react';
+import { useState , useRef } from 'react';
 import CardItems from '../models/tabelsPage/CardItems';
 
 function chunkArray(array, chunkSize) {
@@ -15,6 +15,7 @@ function chunkArray(array, chunkSize) {
 
 
 const LeagueListPage = ({info}) => {
+    const contentDivRef = useRef(null);
     const informationData = info.response;
     const infoData = chunkArray(informationData , 35);
     const [data , setData] = useState(infoData[0])
@@ -28,9 +29,19 @@ const LeagueListPage = ({info}) => {
     const OnChangeHandelerP = (e)=>{
         setData(infoData[+e -1])
         console.log(data);
+        if (contentDivRef.current) {
+            // Get the current position of the div
+            const divPosition = contentDivRef.current.getBoundingClientRect().top;
+      
+            // Calculate scroll value based on div position
+            const scrollValue = divPosition ;
+      
+            // Perform the scroll
+            window.scrollBy({ top: scrollValue, behavior: 'smooth' });
+          }
    }
     return (
-        <div>
+        <div ref={contentDivRef}>
             <div className='flex items-center justify-center'>
                 <Input
                     onChange={(e)=>onChangeHandeler(e)}
@@ -59,7 +70,7 @@ const LeagueListPage = ({info}) => {
                     }
                 />
             </div>
-            <div className= 'overflow-y-scroll flex items-center justify-around flex-wrap w-2/3 m-auto'>
+            <div  className= ' flex items-center justify-around flex-wrap w-2/3 m-auto'>
                 {data.map(items => <CardItems  data={items}/>)}
             </div>
             <div className='flex items-center justify-center'>

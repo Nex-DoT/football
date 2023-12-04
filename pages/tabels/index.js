@@ -11,7 +11,7 @@ const index = ({result}) => {
 
 export default index;
 export async function getServerSideProps(){
-    const url = 'https://api-football-beta.p.rapidapi.com/leagues';
+    const url = 'https://api-football-beta.p.rapidapi.com/leagues?type=league';
     const options = {
         method: 'GET',
         headers: {
