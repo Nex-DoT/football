@@ -1,4 +1,4 @@
-import { Input, Pagination } from '@nextui-org/react';
+import { Input, Pagination , Spinner } from '@nextui-org/react';
 import { CgSearch } from 'react-icons/cg';
 import React, { useState, useRef, useMemo, useTransition } from 'react';
 import CardItems from '../models/tabelsPage/CardItems';
@@ -22,7 +22,6 @@ const LeagueListPage = ({ info }) => {
     const [currentPageData, setCurrentPageData] = useState(chunkedData[0]);
 
     const handleSearchChange = (e) => {
-         // ... existing logic
          const { value } = e.target;
          setSearchText(value);
          startTransition(() => {
@@ -75,10 +74,12 @@ const LeagueListPage = ({ info }) => {
                 { currentPageData?.map((item) => (
                     <CardItems key={item.league.id} data={item} />
                 ))}
+                
+                {isPending && <Spinner label="Loading..." color="warning" />}
             </div>
             <div className='flex items-center justify-center pt-4'>
                 <Pagination
-                    color='primary'
+                    color='success'
                     isCompact
                     showControls
                     total={chunkedData.length}
