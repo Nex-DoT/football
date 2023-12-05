@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CardItems = ({data}) => {
-    console.log(data);
     return (
         <div className=" w-80 h-32 bg-slate-100 rounded-md shadow-small mb-3 flex items-center justify-around mt-3">
             <div className="flex items-center justify-start ml-3">
