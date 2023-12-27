@@ -79,7 +79,7 @@ const LeagueListPage = ({ info }) => {
             </div>
             <div className='flex items-center justify-center pt-4'>
                 <Pagination
-                    color='success'
+                    color='primary'
                     isCompact
                     showControls
                     total={chunkedData.length}

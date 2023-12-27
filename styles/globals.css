@@ -20,6 +20,9 @@
     margin: 0;
     padding: 0;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
     backdrop-filter: blur(40px);
     /* background-color: lightseagreen; */
