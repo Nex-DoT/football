@@ -86,18 +86,16 @@ export default function Menu({children}) {
         <div>
             {children}
         </div>
-        <div className='flex items-center justify-center w-full '>
-            <Button href='#' size='lg' color='primary'>
-                <a href="#" className='flex items-center justify-around w-36 h-full'>
-                <AiFillUpCircle className='text-3xl' />
-            Scroll to top</a></Button>
-           
-        </div>
-        <footer class="bg-color2 text-white text-center py-3 text-lg border-top mt-20">
+        <footer class="bg-color2 text-white text-center py-3 text-lg border-top">
             <div class="max-w-7xl mx-auto">
                 <p class="text-md">NEX-DoT</p>
                 <p class="text-gray-500 font-thin text-sm">© 2023 NEX-DoT. This site is a personal project for practicing Next.js development.</p>
             </div>
+            <br/>
+            <Button href='#' size='lg' color='primary'>
+                <a href="#" className='flex items-center justify-around w-36 h-full'>
+                <AiFillUpCircle className='text-3xl' />
+            Scroll to top</a></Button>
         </footer>
     </div>
   );
