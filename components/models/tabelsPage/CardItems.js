@@ -13,7 +13,8 @@ const CardItems = ({data}) => {
                 </div>
             </div>
             <div>
-                <Button className="text-white" size="sm" color="success"><Link href={`/tabels/${data.league.id}`}>Tabel</Link></Button>
+                <Button className="text-white" size="sm" color="success"><Link href={`/league/${data.league.id}`}>Tabel</Link></Button>
+                <Button className="text-white" size="sm" color="success"><Link href={`/team/${data.league.id}`}>Teams</Link></Button>
             </div>
         </div>
     );

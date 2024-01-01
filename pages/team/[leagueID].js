@@ -1,18 +1,17 @@
-import TeamPage from "../../components/RoutePages/TeamPage";
-const teamID= ({result}) => {
-    console.log(result);
+import TeamsLeague from "../../components/RoutePages/TeamsLeague";
+const leagueID = ({result , route}) => {
     return (
-        <>
-            <TeamPage newdata={result.response}/>
-        </>
+        <div>
+            <TeamsLeague data={result.response} route={route}/>
+        </div>
     );
 };
 
-export default teamID;
+export default leagueID;
 
 export async function getServerSideProps({params}){
-    const id = params.teamID;
-    const url = `https://api-football-beta.p.rapidapi.com/teams/statistics?team=${id}&season=2023&league=39`;
+    // console.log(params);
+    const url = `https://api-football-beta.p.rapidapi.com/teams?league=${params.leagueID}&season=2023`;
     const options = {
         method: 'GET',
         headers: {
@@ -20,13 +19,16 @@ export async function getServerSideProps({params}){
             'X-RapidAPI-Host': 'api-football-beta.p.rapidapi.com'
         }
     };
-
+    
     try {
         const response = await fetch(url, options);
         const result = await response.json();
-        console.log(result);
         return {
-            props: {result}
+            props: {
+                result,
+                route : params.leagueID
+
+            }
         }
     } catch (error) {
         console.error(error);

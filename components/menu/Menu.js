@@ -52,8 +52,8 @@ export default function Menu({children}) {
             </Link>
             </NavbarItem>
             <NavbarItem>
-            <Link href="/tabels/39" className='text-white'>
-                Tabels
+            <Link href="/league" className='text-white'>
+                League
             </Link>
             </NavbarItem>
             <NavbarItem>
