@@ -41,11 +41,11 @@ export default function Menu({children}) {
     <div>
 
         <Navbar className='bg-color2 h-20 bg-opacity-95' shouldHideOnScroll>
-        <NavbarBrand className='flex items-center justify-center flex-col'>
-            <Image src={logo} className='w-10'/>
-            <p className=" text-white">FC Goal</p>
-        </NavbarBrand>
-        <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarContent className="sm:flex gap-4 " justify="center">
+            <NavbarBrand className='flex items-center justify-center flex-col'>
+                <Image src={logo} className='w-10'/>
+                <p className=" text-white">FC Goal</p>
+            </NavbarBrand>
             <NavbarItem>
             <Link href="#" className='text-white'>
                 Home
@@ -57,17 +57,12 @@ export default function Menu({children}) {
             </Link>
             </NavbarItem>
             <NavbarItem>
-            <Link href="#" className='text-white'>
+            <Link href="/league" className='text-white'>
                 Teams
             </Link>
             </NavbarItem>
             <NavbarItem>
-            <Link href="#" className='text-white'>
-                Players
-            </Link>
-            </NavbarItem>
-            <NavbarItem>
-            <Link href="games/1" className='text-white'>
+            <Link href="/games" className='text-white'>
                 Games
             </Link>
             </NavbarItem>

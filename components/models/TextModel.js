@@ -13,7 +13,7 @@ const TextModel = ({text}) => {
             <h1 className="pt-6 pb-6 text-white text-4xl font-thin italic">"Can’t locate your favorite league?"</h1>
             <p className="text-white"> No problem! Simply head over to our dedicated leagues page where you’ll find an extensive selection to choose from. Discover all the action you’ve been missing out on .</p>
             <div className="flex items-center justify-center w-28 h-28">
-                 <Button onClick={()=>{router.push("/tabels")}}>League finder</Button>
+                 <Button onClick={()=>{router.push("/league")}}>League finder</Button>
             </div>
             
             <div className=" absolute w-96 h-96 bg-gradient-to-tr from-color1 to-zinc-700 rotate-45 -z-10 -bottom-44 -left-48"></div>

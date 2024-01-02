@@ -1,11 +1,10 @@
 import { useState } from "react";
-import LiveSelect from "../models/gamePage/LiveSelect";
-const NewsPage = () => {
+const GamePage = () => {
     return (
-        <div className="m-auto w-3/4">
-            <LiveSelect/>
+        <div>
+
         </div>
     );
 };
 
-export default NewsPage;
+export default GamePage;
