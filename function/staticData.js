@@ -4,6 +4,8 @@ import RLM from "public/Teams/RLM.png";
 import PR from "public/League/PremierLeague.png";
 import SA from "public/League/SerieA.png";
 import LA from "public/League/LaLiga.png";
+import BU from "public/League/78.webp";
+import LE from "public/League/61.webp";
 export function data(){
     const data= {
         team:{
@@ -83,4 +85,37 @@ export function data(){
         },
     }
     return data;
+}
+
+export function topleague(){
+    const data = [
+        {
+            id: "135",
+            name: "Serei A",
+            url: SA
+        },
+        {
+            id: "140",
+            name: "La Liga",
+            url: LA
+        },
+        {
+            id: "39",
+            name: "Premier League",
+            url: PR
+        },
+        {
+            id: "61",
+            name: "Ligue 1",
+            url: LE
+        },
+        {
+            id: "78",
+            name: "Bundesliga",
+            url: BU
+        },
+
+    ]
+
+    return data
 }
