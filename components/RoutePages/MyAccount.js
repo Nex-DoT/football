@@ -11,7 +11,7 @@ const MyAccount = () => {
     return (
         <div className="flex items-center justify-between w-full">
             <div className="w-2/4 flex items-center justify-center bg-gradient-to-tr from-slate-800 to-zinc-700 h-screen skew-x-12">
-                <div className="bg-gradient-to-tr from-color1 to-zinc-700 w-64 rounded-md flex items-center justify-around flex-col p-5 h-150 shadow-lg  -skew-x-12">
+                <div className="bg-gradient-to-tr from-color1 to-zinc-700 w-64 rounded-md flex items-center justify-around flex-col p-5 h-200 shadow-lg  -skew-x-12">
                     <div className="flex items-center justify-between  h-12 rounded-full bg-black text-white p-2 relative">
                             <div className={`w-16 h-10 rounded-full transition-all bg-blue-500 absolute bg-opacity-100 z-0 ${selected === "login" ? "left-2" : "left-24 w-20"}`}></div>
                         <div className="flex items-center justify-between w-full z-30">

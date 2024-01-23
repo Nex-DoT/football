@@ -1,4 +1,4 @@
-export function test (data){
+export function test (data , type){
     const Error = {
     };
     // Function to test email format using regex
@@ -21,30 +21,58 @@ export function test (data){
         
         // Function to test password confirmation matching
         function testPasswordConfirmation(password, passwordConfirm) {
-            return password === passwordConfirm;
+            if( password !== passwordConfirm) return false
+            else return true
+            
         }
+    if(type === "signup"){
         if(testEmail(data.email)){
-            Error.email.delete()
+            delete Error.email;
+        }else if(data.email === ""){
+            Error.email = "Email fild is empty";
         }else{
             Error.email = "Email is not valid"
         }
 
         if(testUserName(data.userName)){
-            Error.userName.delete()
+            delete Error.userName
+        }else if (data.userName === ""){
+            Error.userName = "User Name fild is empty";
         }else{
-            Error.userName = "Email is not valid"
+            Error.userName = "User Name is not valid"
         }
 
         if(testPassword(data.password)){
-            Error.password.delete()
+            delete Error.password;
+        }else if (data.password === ""){
+            Error.password = "Password fild is empty";
         }else{
-            Error.password = "Email is not valid"
+            Error.password = "Password is not valid"
         }
 
-        if(testPasswordConfirmation(data.passwordConfirm)){
-            Error.passwordConfirm.delete()
+        if(data.passwordConfirm === ""){
+            Error.passwordConfirm = "Password Confirmation fild is empty";
+        }else if(testPasswordConfirmation( data.password , data.passwordConfirm)){
+            delete Error.passwordConfirm
         }else{
-            Error.passwordConfirm = "Email is not valid"
+            Error.passwordConfirm = "Password Confirm is not valid"
+        } }
+        else if(type === "login"){
+            if(testEmail(data.email)){
+                delete Error.email;
+            }else if(data.email === ""){
+                Error.email = "Email fild is empty";
+            }else{
+                Error.email = "Email is not valid"
+            }
+
+            if(testPassword(data.password)){
+                delete Error.password;
+            }else if (data.password === ""){
+                Error.password = "Password fild is empty";
+            }else{
+                Error.password = "Password is not valid"
+            }
         }
     return Error;
 }

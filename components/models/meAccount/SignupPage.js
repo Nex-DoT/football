@@ -2,27 +2,41 @@ import { Input, Radio , Checkbox , EyeSlash } from "@nextui-org/react";
 import { AiOutlineEye } from "react-icons/ai";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { useState } from "react";
+import { test } from "../../../function/regex";
 const SignupPage = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [data , setData] = useState({
       email: "",
-      useName: "",
+      userName: "",
       password: "",
       passwordConfirm: "",
     });
+    const [error, setError] = useState({});
     const toggleVisibility = () => setIsVisible(!isVisible);
     const submitHandeler = (e)=>{
       e.preventDefault();
+
+      setError(test(data , "signup"));
+      if (!error.email && !error.userName && !error.password && !error.passwordConfirm) {
+        console.log("success");
+      }
+      
+    }
+    const onchangeHandeler= (e)=>{
+      setData({...data , [e.target.name] : e.target.value});
+      setError(test(data));
     }
     return (
         <div className="text-white ">
         <form className="flex items-center justify-around flex-col" onSubmit={submitHandeler}>
-            <h1 className="text-xl font-semibold m-4">Sign-Up</h1>
-            <div className="flex h-52 flex-col w-full justify-around items-center">
+            <h1 className="text-xl font-semibold m-1">Sign-Up</h1>
+            <div className="flex flex-col w-full justify-around items-center">
             <Input
+                onChange={onchangeHandeler}
+                value={data.email}
+                name="email"
                 size="sm"
                 label="Email"
-                isClearable
                 radius="lg"
                 classNames={{
                 label: "text-black/50 dark:text-white/90",
@@ -46,10 +60,13 @@ const SignupPage = () => {
                 ],
                 }}
                 /> 
+                <p className="text-sm font-thin text-red-400">{error.email}</p>
             <Input
+                onChange={onchangeHandeler}
+                value={data.userName}
+                name="userName"
                 size="sm"
                 label="User Name"
-                isClearable
                 radius="lg"
                 classNames={{
                 label: "text-black/50 dark:text-white/90",
@@ -73,10 +90,14 @@ const SignupPage = () => {
                 ],
                 }}
             />
+             <p className="text-sm font-thin text-red-400">{error.userName}</p>
             <Input
+                onChange={onchangeHandeler}
+                value={data.password}
                 size="sm"
                 label="Password"
                 radius="lg"
+                name="password"
                 endContent={
                     <button className="focus:outline-none" type="button" onClick={toggleVisibility}>
                       {isVisible ? (
@@ -109,7 +130,11 @@ const SignupPage = () => {
                 ],
                 }}
             />
+            <p className="text-sm font-thin text-red-400">{error.password}</p>
             <Input
+                onChange={onchangeHandeler}
+                value={data.passwordConfirm}
+                name="passwordConfirm"
                 size="sm"
                 label="Password confirmation"
                 radius="lg"
@@ -145,6 +170,7 @@ const SignupPage = () => {
                 ],
                 }}
             />
+                <p className="text-sm font-thin text-red-400">{error.passwordConfirm}</p>
             </div>
             
             <button className=" w-full h-10 rounded-md bg-blue-500 font-thin hover:bg-blue-400 transition-all mt-8" type="submit">Sign-Up</button>
