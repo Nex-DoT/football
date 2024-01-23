@@ -38,7 +38,7 @@ import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nex
 
 export default function Menu({children}) {
   return (
-    <div>
+    <div className=' min-h-screen'>
 
         <Navbar className='bg-color2 h-20 bg-opacity-95' shouldHideOnScroll>
         <NavbarContent className="sm:flex gap-4 " justify="center">
@@ -68,12 +68,9 @@ export default function Menu({children}) {
             </NavbarItem>
         </NavbarContent>
         <NavbarContent justify="end">
-            <NavbarItem className="hidden lg:flex">
-            <Link href="#">Login</Link>
-            </NavbarItem>
             <NavbarItem>
-            <Button as={Link} color="primary" href="#" variant="flat">
-                Sign Up
+            <Button as={Link} color="primary" href="/myAccount" variant="flat">
+                Login
             </Button>
             </NavbarItem>
         </NavbarContent>

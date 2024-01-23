@@ -4,7 +4,7 @@ import HeaderOfTeam from '../models/teamPage/HeaderOfTeam';
 import DeatailsForThisSeoson from '../models/teamPage/DeatailsForThisSeoson';
 import { useColor } from 'color-thief-react';
 import { Spinner } from '@nextui-org/react';
-const TeamPage = ({ newdata }) => {
+const TeamPage = ({ newdata , players}) => {
   const [logoUrl, setLogoUrl] = useState(newdata.team.logo);
 
   // useColor should be at the top level, not inside useEffect
@@ -34,7 +34,7 @@ const TeamPage = ({ newdata }) => {
     >
         <HeaderOfTeam data={newdata} />
         <DeatailsForThisSeoson data={newdata} />
-        <DeatailTabs color={colors} data={newdata}/>
+        <DeatailTabs color={colors} players={players} data={newdata}/>
     </div>
   );
 };
