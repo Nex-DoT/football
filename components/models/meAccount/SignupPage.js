@@ -13,7 +13,7 @@ const SignupPage = () => {
     });
     const [error, setError] = useState({});
     const toggleVisibility = () => setIsVisible(!isVisible);
-    const submitHandeler = (e)=>{
+    const submitHandeler = async (e)=>{
       e.preventDefault();
 
       setError(test(data , "signup"));
@@ -21,6 +21,13 @@ const SignupPage = () => {
         console.log("success");
       }
       
+     const res = await fetch("api/auth/signup" , {
+      method: "POST" , 
+      body: JSON.stringify({data}) , 
+      headers: {"Content-Type" : "application/json"}
+     })
+     const resdata = await res.json();
+     console.log(resdata);
     }
     const onchangeHandeler= (e)=>{
       setData({...data , [e.target.name] : e.target.value});

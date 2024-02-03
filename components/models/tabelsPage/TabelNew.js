@@ -1,4 +1,5 @@
-import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell} from "@nextui-org/react";import Card from "./Card";
+import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell} from "@nextui-org/react";
+import CardItems from "./CardItems";
 import Image from "next/image";
 const TabelNew = ({data}) => {
     const standings = data[0].league.standings[0];
