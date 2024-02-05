@@ -10,8 +10,8 @@ const MyAccount = () => {
     };
     return (
         <div className="flex items-center justify-between w-full">
-            <div className="w-2/4 flex items-center justify-center bg-gradient-to-tr from-slate-800 to-zinc-700 h-screen skew-x-12">
-                <div className="bg-gradient-to-tr from-color1 to-zinc-700 w-64 rounded-md flex items-center justify-around flex-col p-5 h-200 shadow-lg  -skew-x-12">
+            <div className="w-2/4 flex items-center justify-around bg-gradient-to-tr from-slate-800 to-zinc-700 h-screen skew-x-12">
+                <div className="bg-gradient-to-tr from-color1 to-zinc-700 w-64 rounded-md flex items-center justify-between flex-col pt-12 pb-14 h-200 shadow-lg  -skew-x-12">
                     <div className="flex items-center justify-between  h-12 rounded-full bg-black text-white p-2 relative">
                             <div className={`w-16 h-10 rounded-full transition-all bg-blue-500 absolute bg-opacity-100 z-0 ${selected === "login" ? "left-2" : "left-24 w-20"}`}></div>
                         <div className="flex items-center justify-between w-full z-30">
@@ -23,12 +23,12 @@ const MyAccount = () => {
                 { selected === "login" ? <LoginPage/> : <SignupPage/>}
                 </div>
             </div>
-            <div className=" flex flex-col justify-evenly items-center w-2/4 bg-opacity-50 bg-gradient-to-tr from-slate-800 to-zinc-600 h-screen -skew-x-12">
-                <div className=" skew-x-12 flex items-center flex-col justify-center text-white">
+            {/* <div className=" flex flex-col justify-evenly items-center w-2/4 bg-opacity-50 bg-gradient-to-tr from-slate-800 to-zinc-600 h-screen -skew-x-12"> */}
+                <div className="flex items-center flex-col justify-center">
                     <div className="rounded-full overflow-hidden shadow-lg border-5 border-zinc-800 border-dashed">
                         <Image className=" mix-blend-color-burn" src={png} width={200} height={200}/>
                     </div>
-                        <h2 className="text-2xl font-thin">Login & Sign-up to enjoye more than before...</h2>
+                        <h2 className="text-2xl m-5 ">Login & Sign-up to enjoye more than before...</h2>
                         <ul className="w-2/4 list-disc m-5 text-gray-500">
                             <li className="m-3">Stay updated with your favorite team’s news and scores. Get personalized notifications here!</li>
                             <li className="m-3">Engage with fellow fans during live games. Join the conversation and share your passion for the game!</li>
@@ -36,7 +36,7 @@ const MyAccount = () => {
                             <li className="m-3">Step into the world of football! Join now to dive into live scores, match schedules, player stats, and breaking football news.</li>
                         </ul>
                 </div>
-            </div>
+            {/* </div> */}
         </div>
     );
 };

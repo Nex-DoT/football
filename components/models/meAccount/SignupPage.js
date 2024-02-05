@@ -35,9 +35,9 @@ const SignupPage = () => {
     }
     return (
         <div className="text-white ">
-        <form className="flex items-center justify-around flex-col" onSubmit={submitHandeler}>
+        <form className="flex items-center justify-between h-full flex-col" onSubmit={submitHandeler}>
             <h1 className="text-xl font-semibold m-1">Sign-Up</h1>
-            <div className="flex flex-col w-full justify-around items-center">
+            <div className="flex flex-col w-full justify-around items-center h-56">
             <Input
                 onChange={onchangeHandeler}
                 value={data.email}

@@ -3,7 +3,9 @@ import { Input, Radio , Checkbox } from "@nextui-org/react";
 import { AiOutlineEye } from "react-icons/ai";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { test } from "../../../function/regex";
+import { useRouter } from "next/router";
 const LoginPage = () => {
+  const router = useRouter();
     const [isVisible, setIsVisible] = useState(false);
     const [data , setData] = useState({
       email: "",
@@ -11,14 +13,23 @@ const LoginPage = () => {
     });
     const [error, setError] = useState({});
     const toggleVisibility = () => setIsVisible(!isVisible);
-    const submitHandeler = (e)=>{
+    const submitHandeler = async(e)=>{
       e.preventDefault();
 
       setError(test(data , "login"));
       if (!error.email && !error.password) {
         console.log("success");
       }
-      
+      const res = await fetch("api/auth/login" , {
+        method: "POST" , 
+        body: JSON.stringify({data}) , 
+        headers: {"Content-Type" : "application/json"}});
+      const resData = await res.json();
+      console.log(resData);
+      if(resData.status === "success") {
+        router.push("/dashboard")
+      }
+
     }
     const onchangeHandeler= (e)=>{
       setData({...data , [e.target.name] : e.target.value});
@@ -26,9 +37,9 @@ const LoginPage = () => {
     }
     return (
         <div className="text-white ">
-        <form className="flex items-center justify-around flex-col" onSubmit={submitHandeler}>
+        <form className="flex items-center justify-between h-full flex-col" onSubmit={submitHandeler}>
             <h1 className="text-xl font-semibold m-1">Login</h1>
-            <div className="flex flex-col w-full justify-around items-center">
+            <div className="flex flex-col w-full justify-around items-center h-32">
             <Input
                 onChange={onchangeHandeler}
                 value={data.email}
@@ -101,7 +112,7 @@ const LoginPage = () => {
             <p className="text-sm font-thin text-red-400">{error.password}</p>
             </div>
             
-            <button className=" w-full h-10 rounded-md bg-blue-500 font-thin hover:bg-blue-400 transition-all mt-8" type="submit">Sign-Up</button>
+            <button className=" w-full h-10 rounded-md bg-blue-500 font-thin hover:bg-blue-400 transition-all mt-8" type="submit">Login</button>
         </form>
     </div>
     );

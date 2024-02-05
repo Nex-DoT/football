@@ -8,7 +8,6 @@ export default async function handeler(req , res){
     
     try {
         await connectToDB();
-        console
     }catch(err){
         res.status(500).json({status: 'fail', message: "Error connecting to DB"});
         console.log("error connect to DB");
@@ -19,11 +18,11 @@ export default async function handeler(req , res){
     console.log( email , password);
 
     if(!email || !password){
-        res.status(422).json({status: 'failed' , message: 'the input our empty'});
+        res.status(422).json({status: 'failed' , message: 'The input our empty'});
     }
     
-    const user = await User.findOne({email : email});
-    if(! user){
+    const user = await User.findOne({email : email.toLowerCase()})
+    if( !user ){
         res.status(422).json({status: 'failed' , message: "you dont have account with this inforamtion please sign up."})
     } 
     const isValid = await comparePassword(password , user.password ) ;

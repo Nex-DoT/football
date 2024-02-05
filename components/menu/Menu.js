@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { AiFillUpCircle } from "react-icons/ai";
 import logo from "/public/favicon/favicon.ico";
@@ -37,6 +37,9 @@ import logo from "/public/favicon/favicon.ico";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
 
 export default function Menu({children}) {
+    useEffect(()=>{
+        
+    },[])
   return (
     <div className=' min-h-screen'>
 

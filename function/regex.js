@@ -57,7 +57,7 @@ export function test (data , type){
         }else{
             Error.passwordConfirm = "Password Confirm is not valid"
         } }
-        else if(type === "login"){
+        else{
             if(testEmail(data.email)){
                 delete Error.email;
             }else if(data.email === ""){
