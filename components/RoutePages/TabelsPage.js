@@ -12,9 +12,6 @@ const TabelsPage = ({league , setLeague , data}) => {
         <div>
             <LiveSelect league={league} setLeague={setLeague} data={data}/>
             <TabelNew data={data}/>
-            <div  className=" h-200" >
-              <TextModel></TextModel>
-            </div>
         </div>
     );
 };

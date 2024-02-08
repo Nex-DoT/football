@@ -57,29 +57,29 @@ const LeagueListPage = ({ info }) => {
     };
     return (
         <div ref={contentDivRef}>
-            <div className='flex items-center justify-center mt-6 mb-6'>
+            <div className='flex items-center justify-center pt-6 pb-6 bg-white'>
                 <Input
                     clearable
                     onChange={handleSearchChange}
                     onClear={handleClearSearch}
                     value={searchText}
-                    color="primary"
+                    color="warning"
                     placeholder="Search by name..."
                     startContent={<CgSearch />}
                     width="100%"
                     className='max-w-xs'
                 />
             </div>
-            <div className='flex items-center justify-around flex-wrap m-auto w-2/3'>
+            <div className='flex items-center justify-around flex-wrap m-auto w-3/4'>
                 { currentPageData?.map((item) => (
                     <CardItems key={item.league.id} data={item} />
                 ))}
                 
                 {isPending && <Spinner label="Loading..." color="warning" />}
             </div>
-            <div className='flex items-center justify-center pt-4'>
+            <div className='flex items-center justify-center pt-4 bg-white'>
                 <Pagination
-                    color='primary'
+                    color='warning'
                     isCompact
                     showControls
                     total={chunkedData.length}

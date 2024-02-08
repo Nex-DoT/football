@@ -1,5 +1,4 @@
-import { nextui } from "@nextui-org/react"
-
+import { nextui } from "@nextui-org/react";
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -9,6 +8,12 @@ module.exports = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
+    fontFamily: {
+      ProtestG:['Protest Guerrilla', 'sans-serif'],
+      Roberto: ['Titillium Web', 'sans-serif'],
+      Rubic: ['Rubik', 'sans-serif'],
+      Anton: ['Anton', 'sans-serif'],
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -17,17 +22,20 @@ module.exports = {
       },
       colors: {
         "color1":"#17181d",
-        "color2":"#292c35",
-        "color3":"#e09145",
-        "color4":"#DBD8E3",
-        "color5":"#03C4A1",
+        "color2":"#FFF",
+        "color3":"#292c35",
+        "color4":"#F5F5F5",
+        "color5":"#F5F5F5",
+        "color6":"#D4A724",
+        "color7":"#fed55f",
       },
       height:{
         "200": "500px",
+        "210": "570px",
         "150": "450px",
       },
       width:{
-        "200": "800px"
+        "200": "1500px"
       },
       left:{
         "150": "500px",
@@ -38,5 +46,5 @@ module.exports = {
   },
   plugins: [],
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [nextui() ,],
 }

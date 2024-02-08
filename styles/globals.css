@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -25,7 +29,7 @@ html{
 }
 body {
     backdrop-filter: blur(40px);
-    /* background-color: lightseagreen; */
+    background-color: #F5F5F5;
     height: 100vh;
     overflow-x: hidden;
 }

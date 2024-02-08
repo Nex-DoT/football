@@ -34,5 +34,5 @@ export default async function handeler(req , res){
     const token = sign({email} , process.env.SECRECT_KEY , {expiresIn:expiretion})
 
 
-    res.status(200).setHeader("Set-Cookie", serialize("toekn" , token , {httpOnly:true , maxAge:expiretion , path:"/"})).json({status:"success" , message:"you login successfuly"})
+    res.status(200).setHeader("Set-Cookie", serialize("token" , token , {httpOnly:true , maxAge:expiretion , path:"/"})).json({status:"success" , message:"you login successfuly"})
 }

@@ -13,8 +13,10 @@ export async function comparePassword(password , hashedPassword){
 export async function tokenValidation(token , secretKey){
     try{
         const validate = verify(token , secretKey);
-        return {email: validate.email};
+        const userEmail = validate.email.toLowerCase();
+        return {email: userEmail};
     }catch(err){
         console.log("token validation failed");
+        return false;
     }
 }

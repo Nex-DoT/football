@@ -4,7 +4,7 @@ const WelcomingComponent = () => {
     return (
         <div className="flex items-center justify-between mt-9 p-10 mb-9">
             <div className=" w-1/2">
-                <h1 className="text-4xl italic font-bold mb-5">Welcome to FC Goal website!</h1>
+                <h1 className="text-4xl italic font-bold mb-5">Welcome to <p className=" inline font-ProtestG"> FC Goal</p>  website!</h1>
                 <p className=" text-lg font-thin mb-10 p-3">Here, you can find the latest results and analysis of all your favorite football matches, from the Premier League to the Champions League. We also have in-depth statistics and records on all teams and players.</p>
                 <ul className=" list-disc p-3">
                     <h2 className="font-bold text-lg mb-5">Here are some of the things you can do on our website:</h2>
