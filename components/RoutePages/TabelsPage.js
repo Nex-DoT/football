@@ -9,7 +9,7 @@ const TabelsPage = ({league , setLeague , data}) => {
       };
     
     return (
-        <div>
+        <div className="w-full">
             <LiveSelect league={league} setLeague={setLeague} data={data}/>
             <TabelNew data={data}/>
         </div>

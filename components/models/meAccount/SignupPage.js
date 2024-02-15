@@ -31,13 +31,14 @@ const SignupPage = () => {
     }
     const onchangeHandeler= (e)=>{
       setData({...data , [e.target.name] : e.target.value});
-      setError(test(data));
+      setError(test(data , "signup"));
     }
     return (
-        <div className="text-white ">
-        <form className="flex items-center justify-between h-full flex-col" onSubmit={submitHandeler}>
-            <h1 className="text-xl font-semibold m-1">Sign-Up</h1>
-            <div className="flex flex-col w-full justify-around items-center h-56">
+        <div className="text-black h-full">
+        <form className="flex items-center justify-between h-full flex-col " onSubmit={submitHandeler}>
+          <div className="h-full flex flex-col items-center justify-around">
+            <h1 className="text-2xl font-ProtestG m-1">Sign-Up</h1>
+            <div className="text-center h-56">
             <Input
                 onChange={onchangeHandeler}
                 value={data.email}
@@ -55,7 +56,7 @@ const SignupPage = () => {
                 innerWrapper: "bg-transparent",
                 inputWrapper: [
                     "shadow-xl",
-                    "bg-gray-500",
+                    "bg-white",
                     "dark:bg-default/60",
                     "backdrop-blur-xl",
                     "backdrop-saturate-200",
@@ -67,7 +68,7 @@ const SignupPage = () => {
                 ],
                 }}
                 /> 
-                <p className="text-sm font-thin text-red-400">{error.email}</p>
+                <p className="text-xs font-thin text-red-400 h-4">{error.email}</p>
             <Input
                 onChange={onchangeHandeler}
                 value={data.userName}
@@ -85,7 +86,7 @@ const SignupPage = () => {
                 innerWrapper: "bg-transparent",
                 inputWrapper: [
                     "shadow-xl",
-                    "bg-gray-500",
+                    "bg-white",
                     "dark:bg-default/60",
                     "backdrop-blur-xl",
                     "backdrop-saturate-200",
@@ -97,7 +98,7 @@ const SignupPage = () => {
                 ],
                 }}
             />
-             <p className="text-sm font-thin text-red-400">{error.userName}</p>
+             <p className="text-xs font-thin text-red-400 h-4">{error.userName}</p>
             <Input
                 onChange={onchangeHandeler}
                 value={data.password}
@@ -125,7 +126,7 @@ const SignupPage = () => {
                 innerWrapper: "bg-transparent",
                 inputWrapper: [
                     "shadow-xl",
-                    "bg-gray-500",
+                    "bg-white",
                     "dark:bg-default/60",
                     "backdrop-blur-xl",
                     "backdrop-saturate-200",
@@ -137,7 +138,7 @@ const SignupPage = () => {
                 ],
                 }}
             />
-            <p className="text-sm font-thin text-red-400">{error.password}</p>
+            <p className="text-xs font-thin text-red-400 h-4">{error.password}</p>
             <Input
                 onChange={onchangeHandeler}
                 value={data.passwordConfirm}
@@ -165,7 +166,7 @@ const SignupPage = () => {
                 innerWrapper: "bg-transparent",
                 inputWrapper: [
                     "shadow-xl",
-                    "bg-gray-500",
+                    "bg-white",
                     "dark:bg-default/60",
                     "backdrop-blur-xl",
                     "backdrop-saturate-200",
@@ -177,10 +178,13 @@ const SignupPage = () => {
                 ],
                 }}
             />
-                <p className="text-sm font-thin text-red-400">{error.passwordConfirm}</p>
+                <p className="text-xs h-1 font-thin text-red-400">{error.passwordConfirm}</p>
             </div>
+
+          </div>
             
-            <button className=" w-full h-10 rounded-md bg-blue-500 font-thin hover:bg-blue-400 transition-all mt-8" type="submit">Sign-Up</button>
+            <button className=" w-full h-14 rounded-md bg-gradient-to-tr from-color7 to-color6 shadow-lg font-ProtestG hover:opacity-80 transition-all mt-8" type="submit">Sign-Up</button>
+
         </form>
     </div>
     );

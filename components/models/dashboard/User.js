@@ -1,13 +1,15 @@
 import React from 'react';
 import { MdEmail } from "react-icons/md";
-import { FaRegCircleUser } from "react-icons/fa6";
+import { FaRegUser } from "react-icons/fa";
 
 
 const User = ({data}) => {
     return (
-        <div className=' h-210 bg-color2 w-3/4 m-2 rounded-lg text-white flex items-center justify-start'>
+        <div className=' h-210 bg-color2 w-full mt-2 mb-2 m-auto rounded-lg  flex items-center justify-center flex-col'>
             <div className='flex items-center justify-between w-52'>
-                <FaRegCircleUser className='h-14 w-8'/>
+                <div className='w-8 items-center flex justify-center mr-3'>
+                     <FaRegUser className='h-14 w-5'/>
+                </div>
                 <h2 className=' w-40'>{data.username}</h2>
             </div>
             <div className='flex items-center justify-between w-52'>

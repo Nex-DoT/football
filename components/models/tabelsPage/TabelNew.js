@@ -39,20 +39,20 @@ const TabelNew = ({data}) => {
     ];
     return (
          <div className="w-full felx items-center justify-center m-auto mt-5 mb-5 pt-5 pb-5">
-            <Table className="w-3/4 m-auto" isHeaderSticky aria-label="Example table with dynamic content">
+            <Table className="w-full sm:w-3/4 m-auto" isHeaderSticky aria-label="Example table with dynamic content">
               <TableHeader>
                 {columns.map(column => <TableColumn className=" text-start" key={column.key}>{column.label}</TableColumn>)}
               </TableHeader>
               <TableBody items={standings}>
                 {(items)=>(
-                    <TableRow key={items.rank}>
+                    <TableRow className="text-xs" key={items.rank}>
                     <TableCell>{items.rank}</TableCell>
                     <TableCell className="flex items-center justify-start"><Image className=" object-cover" src={items.team.logo} width={30} alt="logo" height={30} />{items.team.name}</TableCell>
                     <TableCell>{items.points}</TableCell>
                     <TableCell>{items.all.win}</TableCell>
                     <TableCell>{items.all.draw}</TableCell>
                     <TableCell>{items.all.lose}</TableCell>
-                    <TableCell>{items.form}</TableCell>
+                    <TableCell className="">{items.form}</TableCell>
                     <TableCell>{items.goalsDiff}</TableCell>
                 </TableRow>
                 )}

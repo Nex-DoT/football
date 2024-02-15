@@ -27,14 +27,16 @@ const TeamPage = ({ newdata , players}) => {
   // Render the component with the background style
   return (
     <div 
-    className='shadow-xl'
+    className='shadow-xl w-full h-full p-14'
       style={{
-        background: `linear-gradient(to top left, ${colors ? colors : '#000000'}, #292c35 , #292c35 , #292c35 ,${colors ? colors : '#000000'})`,
+        background: `linear-gradient(to top left, ${colors ? colors : '#000000'}, #fff , #fff, #fff, #fff , #fff ,${colors ? colors : '#000000'})`,
       }}
-    >
+    >   
+     <div className='z-10 rounded-md'>
         <HeaderOfTeam data={newdata} />
         <DeatailsForThisSeoson data={newdata} />
         <DeatailTabs color={colors} players={players} data={newdata}/>
+     </div>
     </div>
   );
 };

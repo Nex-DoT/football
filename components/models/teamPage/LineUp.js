@@ -14,8 +14,8 @@ const LineUp = ({data , color}) => {
     const formation = data.formation.split("-").reverse();
     console.log(formation);
     return (
-        <div className='text-white flex items-center justify-center flex-col h-96 m-16 rounded-md bg-color2 shadow-lg'>
-            <h1 className=' text-xl font-thin'>{data.played} Times played</h1>
+        <div className='flex items-center justify-center flex-col h-96 m-16 rounded-md bg-white shadow-lg'>
+            <h1 className=' text-xl font-thin font-Anton'>{data.played} Times played</h1>
             <p className='text-gray-400'>{data.formation}</p>
             <div className='relative w-64 rounded-lg overflow-hidden h-72 m-3'>
                 <Image className='top-0 rounded-xl absolute' src={pitch} height={550} width={550}/>

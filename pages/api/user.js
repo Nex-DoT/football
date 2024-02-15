@@ -9,7 +9,7 @@ async function handeler(req , res){
 
     const validate = tokenValidation(token , process.env.SECRET_KEY)
     if(validate){
-        res.status(200).json({status: "ok" , validate })
+        res.status(200).json({status: "success" , validate })
     }else{
         res.status(401).json({status: "failed" , message:"you are not unathorized."})
     }
