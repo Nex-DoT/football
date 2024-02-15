@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IoSend } from "react-icons/io5";
 import MessageCard from "./MessageCard";
-import chatboxPng from "/VC_project/football/public/image/chatbox.png"
+import chatboxPng from "public/image/chatbox.png"
 import Image from "next/image";
 import Link from "next/link";
 export default function Chatbox({auth , username , message}) {
