@@ -20,7 +20,7 @@ const LineUp = ({data , color}) => {
             <div className='relative w-64 rounded-lg overflow-hidden h-72 m-3'>
                 <Image className='top-0 rounded-xl absolute' src={pitch} height={550} width={550}/>
                 <div className=' absolute bg-gray-50 bg-opacity-5 z-40 w-full h-full flex items-center justify-around flex-col'>
-                    {formation.map( items => <div className='flex items-center justify-around w-3/4'>{createSpan(+items)}</div> )}
+                    {formation.map( items => <div key={items.index} className='flex items-center justify-around w-3/4'>{createSpan(+items)}</div> )}
                     <div>
                          <div className='w-7 h-7 rounded-full border-2 ' style={{background:`${color}`}}></div>
                     </div>

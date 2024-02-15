@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
-import { useRouter } from 'next/router';
 import TabelsPage from '../../components/RoutePages/TabelsPage';
-const league = ({result}) => {
+import { useRouter } from 'next/router';
+function League({ result }) {
     const router = useRouter();
-    const {league , setLeague } = useState(router.query.leagueName);
-
+    const { league, setLeague } = useState(router.query.leageuName); // با فرض صحیح بودن leageuName
+  
     return (
-        <div>
-            <TabelsPage data={result} league={league} setLeague={setLeague}/>
-        </div>
+      <div>
+        <TabelsPage data={result} league={league} setLeague={setLeague} />
+      </div>
     );
-};
-
-export default league;
+  }
+export default League;
 export async function getServerSideProps({params}){
     const data = params.leageuName
     const url = `https://api-football-beta.p.rapidapi.com/standings?season=2023&league=${data}`;

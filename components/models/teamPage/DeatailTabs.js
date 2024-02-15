@@ -36,7 +36,7 @@ export default function DeatailTabs({data , color , players}) {
         </Tab>
         <Tab key="Players" title="Players">
             <div className="m-auto flex  items-center justify-center sm:justify-between flex-wrap bg-color4 backdrop-blur-md shadow-md rounded-md md:w-5/6">
-                  {players.map(items => <PlayerCard info={items} color={color}/>)}
+                  {players.map(items => <PlayerCard key={items.id} info={items} color={color}/>)}
             </div> 
         </Tab>
     </Tabs>
