@@ -38,7 +38,7 @@ export default function Chatbox({auth , username , message}) {
   if(!auth){
     return (
       <div className=" h-96  w-80  rounded-md absolute top-10 left-5 flex items-center flex-col justify-between">
-        <Image className=" blur-sm" src={chatboxPng} />
+        <Image className=" blur-sm" alt="png" src={chatboxPng} />
         <div className=" absolute top-1/2 -translate-y-1/2 p-5 text-sm flex items-center justify-around flex-col">
             <h2>We love to have you in the chat Just a quick sign up and you will be ready to chat with everyone</h2>
             <button className="p-2 text-base font-ProtestG bg-gradient-to-tr from-color6 to-color7 rounded-md"><Link href={'/myAccount'}>Login</Link></button>

@@ -1,5 +1,6 @@
 import {Select, SelectItem} from "@nextui-org/react";
 import {leageuValue} from "./dataOption.js";
+import Image from "next/image.js";
 import { useState } from "react";
 import { useRouter } from "next/router.js";
 const LiveSelect = ({league , data}) => {
@@ -10,7 +11,7 @@ const LiveSelect = ({league , data}) => {
     return (
         <div className=" flex items-center justify-around mt-10 flex-wrap">
             <div>
-                <h1 className=" text-2xl sm:text-3xl font-semibold flex items-center justify-center"><img src={data[0].league.logo} className=" w-12 mr-2 aspect-square object-contain" alt="" /> {data[0].league.name} Tabel </h1>
+                <h1 className=" text-2xl sm:text-3xl font-semibold flex items-center justify-center"><Image src={data[0].league.logo} className=" w-12 mr-2 aspect-square object-contain" width={300} alt="png" /> {data[0].league.name} Tabel </h1>
                 <hr className=" border-2 rounded-md border-color3  mt-1"/>
             </div>
             <Select 

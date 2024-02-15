@@ -4,6 +4,7 @@ import {Tabs, Tab, Card, CardBody} from "@nextui-org/react";
 import GoalDetail from "./GoalDetail.js";
 import PlayerCard from "./PlayerCard.js";
 import { useState } from "react";
+import Image from "next/image.js";
 export default function DeatailTabs({data , color , players}) {
 
   return (
@@ -22,7 +23,7 @@ export default function DeatailTabs({data , color , players}) {
     >
        <Tab key="LineUP" title="Line Up">
         <div  className=" m-auto flex  items-center justify-between flex-col bg-color4 backdrop-blur-md shadow-md rounded-md sm:w-5/6">
-            <h1 className=" flex items-center justify-around font-ProtestG text-2xl mt-8"> <img className=" w-8 mr-2" src={data.team.logo} alt="" /> {data.team.name} Line Up</h1>
+            <h1 className=" flex items-center justify-around font-ProtestG text-2xl mt-8"> <Image className=" w-8 mr-2" ref={data.team.logo} alt="png" /> {data.team.name} Line Up</h1>
             <div className=" flex items-center justify-around mt-16 flex-wrap">
               {data.lineups.map(items => <LineUp color={color} data={items} key={items.formation}/>)}
             </div>

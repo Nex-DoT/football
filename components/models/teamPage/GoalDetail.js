@@ -1,9 +1,9 @@
-
+import Image from "next/image";
 const GoalDetail = ({data}) => {
     const goals = data.goals
     return (
         <div className="flex items-center justify-center flex-col flex-wrap">
-                <h1 className=" flex items-center justify-around font-ProtestG text-2xl mt-8 "> <img className=" w-8 mr-2" src={data.team.logo} alt="" /> {data.team.name} Goals Stats</h1>
+                <h1 className=" flex items-center justify-around font-ProtestG text-2xl mt-8 "> <Image className=" w-8 mr-2" ref={data.team.logo} alt="png" width={300} /> {data.team.name} Goals Stats</h1>
                 <div className="flex items-center justify-between flex-wrap">
                   <div className="flex items-center justify-center flex-col mt-5">
                     <h1 className="text-2xl font-thin">ُScored Goals :</h1>

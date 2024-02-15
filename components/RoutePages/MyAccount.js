@@ -26,7 +26,7 @@ const MyAccount = () => {
             {/* <div className=" flex flex-col justify-evenly items-center w-2/4 bg-opacity-50 bg-gradient-to-tr from-slate-800 to-zinc-600 h-screen -skew-x-12"> */}
                 <div className=" hidden items-center flex-col justify-center md:flex">
                     <div className="rounded-full overflow-hidden shadow-lg border-5 border-zinc-800 border-dashed">
-                        <Image className="" src={png} width={200} height={200}/>
+                        <Image className="" src={png} width={200} height={200} alt="png"/>
                     </div>
                         <h2 className="text-2xl m-5 ">Login & Sign-up to enjoye more than before...</h2>
                         <ul className="w-2/4 list-disc m-5 text-gray-500">

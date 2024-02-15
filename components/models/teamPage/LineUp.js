@@ -18,7 +18,7 @@ const LineUp = ({data , color}) => {
             <h1 className=' text-xl font-thin font-Anton'>{data.played} Times played</h1>
             <p className='text-gray-400'>{data.formation}</p>
             <div className='relative w-64 rounded-lg overflow-hidden h-72 m-3'>
-                <Image className='top-0 rounded-xl absolute' src={pitch} height={550} width={550}/>
+                <Image className='top-0 rounded-xl absolute' src={pitch} height={550} width={550} alt='png'/>
                 <div className=' absolute bg-gray-50 bg-opacity-5 z-40 w-full h-full flex items-center justify-around flex-col'>
                     {formation.map( items => <div key={items.index} className='flex items-center justify-around w-3/4'>{createSpan(+items)}</div> )}
                     <div>

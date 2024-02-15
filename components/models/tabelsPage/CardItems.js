@@ -6,7 +6,7 @@ const CardItems = ({data}) => {
     return (
         <div className=" w-96 bg-white rounded-md shadow-md mb-3 flex items-center justify-around mt-3 ">
             <div className="flex items-center justify-start m-5">
-                <Image className=" aspect-square object-contain mr-2" src={data.league.logo} height={60} width={60}/>
+                <Image className=" aspect-square object-contain mr-2" alt="png" src={data.league.logo} height={60} width={60}/>
                 <div className=" w-32">
                     <h2 className=" font-Anton">{data.league.name}</h2>
                     <p className="text-sm text-gray-400 font-Roberto">{data.country.name}</p>

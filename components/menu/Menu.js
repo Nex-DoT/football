@@ -53,7 +53,7 @@ export default function Menu({children}) {
             </div>
             <div className='flex items-center font-ProtestG sm:w-1/4 w-5/6 justify-center sm:justify-start'>
                 <div className='flex items-center p-1 rounded-md justify-around bg-color3 flex-row w-32'>
-                    <Image src={logo} className='w-10'/>
+                    <Image src={logo} className='w-10' alt='photo'/>
                     <p className=" text-color7 text-md ">FC Goal</p>
                 </div>
             </div>
