@@ -5,7 +5,7 @@ const TeamCard = ({data , route}) => {
     console.log(route);
     return (
         <div className=' w-96 bg-white h-40 rounded-md mt-5 mb-5 flex items-center justify-between p-4 shadow-lg hover:bg-color2 transition-colors'>
-            <Image className='w-16 object-cover ml-3 mr-3' width={300} ref={data.team.logo} alt="png" />
+            <Image className='w-16 object-cover ml-3 mr-3' height={300} width={300} src={data.team.logo} alt="png" />
             <div className="flex flex-col items-start justify-evenly h-2/4 w-2/4">
                 <div>
                     <h3 className='text-md font-Rubic'>{data.team.name}</h3>

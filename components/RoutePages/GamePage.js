@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { topleague } from "../../function/staticData";
 import Card from "../models/gamesPage/Card";
 import Chatbox from "../models/gamesPage/Chatbox";
 const GamePage = ({data , auth , username , message}) => {
@@ -11,7 +9,7 @@ const GamePage = ({data , auth , username , message}) => {
                 <h3 className="text-3xl">{newdata[0].league.name} Fixtures for the Next 7 Days :</h3>
             </div>
             <div className="w-3/4 flex items-center justify-center flex-wrap">
-                {newdata.map(item => <Card key={item.index} data={item}/>)}
+                {newdata.map(item => <Card data={item}/>)}
             </div>
         </div>
     );

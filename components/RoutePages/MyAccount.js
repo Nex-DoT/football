@@ -30,7 +30,7 @@ const MyAccount = () => {
                     </div>
                         <h2 className="text-2xl m-5 ">Login & Sign-up to enjoye more than before...</h2>
                         <ul className="w-2/4 list-disc m-5 text-gray-500">
-                            <li className="m-3">Stay updated with your favorite team’s news and scores. Get personalized notifications here!</li>
+                            <li className="m-3">Stay updated with your favorite teams news and scores. Get personalized notifications here!</li>
                             <li className="m-3">Engage with fellow fans during live games. Join the conversation and share your passion for the game!</li>
                             <li className="m-3">Access to different chat rooms for different games, teams, or general sports discussions.</li>
                             <li className="m-3">Step into the world of football! Join now to dive into live scores, match schedules, player stats, and breaking football news.</li>

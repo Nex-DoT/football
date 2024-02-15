@@ -25,7 +25,7 @@ const PlayerCard = ({info , color}) => {
            background: `linear-gradient(to top right, #fff , #fff , #fff ,#fff,#fff ,#fff ,${color ? color : '#000000'})`,
          }}>
            <div className="flex items-center justify-center w-full">
-               <Image className=" object-cover w-16 rounded-full mr-3" ref={info.player.photo} alt="png" width={300} />
+               <Image className=" object-cover w-16 rounded-full mr-3" src={info.player.photo} alt="png" width={300} height={300} />
                <div>{info.player.name}<p className="text-gray-400">{info.player.nationality}</p></div>
            </div>
            <button onClick={modalHandeler} className=" bg-gradient-to-tr from-color6 to-color7 font-ProtestG rounded-md w-full h-10">More Detail</button>
@@ -36,7 +36,7 @@ const PlayerCard = ({info , color}) => {
                      
                      <ul className="flex flex-wrap items-center justify-center p-2 bg-color4 rounded-lg sm:w-4/5">
                        <li className=" m-3 w-full"><div className="flex items-center justify-center">
-                       <Image src={info.player.photo} className="rounded-full w-24 border-gray-700 p-3" alt="png" width={300} />
+                       <Image src={info.player.photo} className="rounded-full w-24 border-gray-700 p-3" alt="png" height={300} width={300} />
                        <p className="">{info.player.name}</p>
                      </div></li>
                        <li className=" m-3 w-2/5">Nationality: {info.player.nationality}</li>
