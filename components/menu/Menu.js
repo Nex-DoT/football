@@ -96,10 +96,10 @@ export default function Menu({children}) {
         <div className=' font-Roberto bg-color4'>
             {children}
         </div>
-        <footer class="bg-color2 text-white text-center py-3 text-lg border-top">
-            <div class="max-w-7xl mx-auto">
-                <p class="text-md">NEX-DoT</p>
-                <p class="text-gray-500 font-thin text-sm">© 2023 NEX-DoT. This site is a personal project for practicing Next.js development.</p>
+        <footer className="bg-color2 text-white text-center py-3 text-lg border-top">
+            <div className="max-w-7xl mx-auto">
+                <p className="text-md">NEX-DoT</p>
+                <p className="text-gray-500 font-thin text-sm">© 2023 NEX-DoT. This site is a personal project for practicing Next.js development.</p>
             </div>
             <br/>
             <Button href='#' size='lg' color='primary'>

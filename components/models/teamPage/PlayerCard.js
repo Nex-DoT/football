@@ -3,7 +3,6 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { GiDuel } from "react-icons/gi";
 import { GiBurningPassion } from "react-icons/gi";
 import { TbCardsFilled } from "react-icons/tb";
-import { IoFootballOutline } from "react-icons/io5";
 import { RiCompasses2Line } from "react-icons/ri";
 import { GiBurningRoundShot } from "react-icons/gi";
 import { ImStatsBars } from "react-icons/im";

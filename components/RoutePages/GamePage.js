@@ -9,7 +9,7 @@ const GamePage = ({data , auth , username , message}) => {
                 <h3 className="text-3xl">{newdata[0].league.name} Fixtures for the Next 7 Days :</h3>
             </div>
             <div className="w-3/4 flex items-center justify-center flex-wrap">
-                {newdata.map(item => <Card data={item}/>)}
+                {newdata.map((item , index) => <Card key={index} data={item}/>)}
             </div>
         </div>
     );

@@ -49,7 +49,7 @@ export default function Chatbox({auth , username , message}) {
     return (
       <div className=" h-96 shadow-md w-80 bg-white rounded-md absolute top-10 left-5 flex items-center flex-col justify-between p-2">
         <div className="bg-color4 w-full rounded-md p-2 overflow-y-scroll">
-          {alltext.map( item =><MessageCard key={item.index} item={item}/>)}
+          {alltext.map( (item , index) =><MessageCard key={index} item={item}/>)}
         </div>
         <div className="flex items-center justify-around  w-full h-10 mt-2">
           <input className="w-3/4 h-12 rounded-full bg-color4 outline-none text-md p-4" type="text" value={text} maxLength={100} onChange={changeHandeler} onKeyUp={enterHandeler}/>
