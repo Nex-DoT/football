@@ -9,7 +9,7 @@ const MyAccount = () => {
         setSelected(e.target.name)
     };
     return (
-        <div className="flex items-center justify-center md:justify-between w-full">
+        <div className="flex items-center justify-center md:justify-between w-full overflow-x-hidden">
             <div className="w-2/4 flex items-center justify-around bg-white shadow-sm h-screen skew-x-12">
                 <div className=" bg-color4 w-64 rounded-md flex items-center justify-between flex-col pt-10 pb-5 h-200 shadow-lg  -skew-x-12">
                     <div className="flex w-56 items-center justify-between  h-12 rounded-full bg-white text-black font-Rubic p-2 relative">
