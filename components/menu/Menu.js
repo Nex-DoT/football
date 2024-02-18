@@ -33,7 +33,7 @@ export default function Menu({children}) {
   return (
       <div className=' min-h-screen relative'>
         <div className='bg-white flex items-center justify-between border-b-2  h-20 bg-opacity-80 w-full sticky top-0 z-50 p-8 backdrop:blur'>
-            <div className={` absolute bg-white top-20 w-full left-0 pb-4 shadow-md rounded-b-lg flex items-center gap-2 pt-2 justify-start flex-col sm:hidden sm:disabled: ${menu ?'animate-appearance-in' : ' hidden'} `}>
+            <div onClick={menuHandler} className={` absolute bg-white top-20 w-full left-0 pb-4 shadow-md rounded-b-lg flex items-center gap-2 pt-2 justify-start flex-col sm:hidden sm:disabled: ${menu ?'animate-appearance-in' : ' hidden'} `}>
                 <div className='w-2/6 hover:bg-color4 transition-colors  p-2 h-16 flex items-center justify-center text-lg rounded'>
                 <Link href="#" className='text-black'>
                     Home

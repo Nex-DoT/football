@@ -21,11 +21,11 @@ const Card = ({data}) => {
     },[])
     console.log(data);
     return (
-        <div className='flex flex-col items-center justify-center bg-color2 m-5 rounded-md shadow-md w-2/6'>
+        <div className='flex flex-col items-center justify-center bg-color2 m-5 rounded-md shadow-md w-96 p-3'>
         <div className="w-full flex items-center justify-center flex-col">
             <h1 className="text-sm p-3 flex items-center justify-between w-42 h-12 m-2 bg-gradient-to-br from-color6 to-color7 rounded-full font-Rubic"><TiTime className="w-7 h-7"/> : {date}</h1>
             <div className="flex items-center justify-evenly w-full">
-                 <div className="flex items-center  justify-evenly bg-color4 rounded-md  text-sm font-thin flex-col w-32 h-32">
+                 <div className="flex items-center  justify-evenly bg-color4 rounded-md  text-sm font-thin flex-col w-28 h-28">
                     <h2 className="text-xs">Home</h2>
                     <Image src={data.teams.home.logo} className="w-12 aspect-square" width={300} height={300} alt="png" />
                     <p className="text-md font-semibold">{data.teams.home.name}</p>
@@ -44,7 +44,7 @@ const Card = ({data}) => {
                      </div>
                  </div>}
                  
-                 <div className="flex items-center justify-evenly  bg-color4 rounded-md text-sm font-thin flex-col w-32 h-32">
+                 <div className="flex items-center justify-evenly  bg-color4 rounded-md text-sm font-thin flex-col w-28 h-28">
                     <h2 className="text-xs">Away</h2>
                          <Image src={data.teams.away.logo} className="w-12 aspect-square" width={80} height={80} alt="png" />
                          <p className="text-md font-semibold">{data.teams.away.name}</p>
