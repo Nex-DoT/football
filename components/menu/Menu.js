@@ -113,10 +113,9 @@ export default function Menu({children}) {
                 </a>
             </button>
         )}
-        <div className=" flex items-center justify-center h-11">
-            <div className="w-full flex items-center justify-center">
-                <p className="text-md font-thin">NEX-DoT</p>
-                <p className="text-gray-500 font-thin text-sm">© 2024 NEX-DoT. This site is a personal project for practicing Next.js development.</p>
+        <div className=" flex items-center justify-center">
+            <div className="w-full flex items-start justify-center pb-10">
+                <p className="text-gray-500 font-thin text-xs text-center">NEX-DoT © 2024 NEX-DoT. This site is a personal project for practicing Next.js development.</p>
             </div>
         </div>
     </div>
