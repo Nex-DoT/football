@@ -6,6 +6,11 @@ import SA from "public/League/SerieA.png";
 import LA from "public/League/LaLiga.png";
 import BU from "public/League/78.webp";
 import LE from "public/League/61.webp";
+import BGPl from 'public/League/BG-Pl.jpg';
+import BGSA from 'public/League/BG-SA.png';
+import BGL1 from 'public/League/BG-L1.jpg';
+import BGBUN from 'public/League/BG-BUN.png';
+import BGLiga from 'public/League/BG-Liga.png';
 export function data(){
     const data= {
         team:{
@@ -92,27 +97,32 @@ export function topleague(){
         {
             id: "135",
             name: "Serei A",
-            url: SA
+            url: SA,
+            back: BGSA
         },
         {
             id: "140",
             name: "La Liga",
-            url: LA
+            url: LA,
+            back: BGLiga
         },
         {
             id: "39",
             name: "Premier League",
-            url: PR
+            url: PR,
+            back: BGPl
         },
         {
             id: "61",
             name: "Ligue 1",
-            url: LE
+            url: LE,
+            back: BGL1
         },
         {
             id: "78",
             name: "Bundesliga",
-            url: BU
+            url: BU,
+            back: BGBUN
         },
 
     ]
