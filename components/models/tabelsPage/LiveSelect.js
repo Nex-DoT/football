@@ -6,7 +6,7 @@ import { useRouter } from "next/router.js";
 const LiveSelect = ({league , data}) => {
     const router = useRouter()
     const onChangeHandeler = (e) => {
-        router.push(`/tabels/${e.target.value}`)
+        router.push(`/league/${e.target.value}`)
     };
     return (
         <div className=" flex items-center justify-around mt-10 flex-wrap">

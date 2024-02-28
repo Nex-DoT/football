@@ -27,7 +27,7 @@ const Card = ({data}) => {
             <div className="flex items-center justify-evenly w-full">
                  <div className="flex items-center  justify-evenly bg-color4 rounded-md  text-sm font-thin flex-col w-28 h-28">
                     <h2 className="text-xs">Home</h2>
-                    <Image src={data.teams.home.logo} className="w-12 aspect-square" width={300} height={300} alt="png" />
+                    <Image src={data.teams.home.logo} className="w-12 aspect-square object-contain" width={300} height={300} alt="png" />
                     <p className="text-md font-semibold">{data.teams.home.name}</p>
                  </div>
                  {data.fixture.status.long === "Not Started" ? <div className=" text-sm font-thin bg-red-400 bg-opacity-20 w-20 h-10 rounded-md flex items-center justify-evenly" >
@@ -46,7 +46,7 @@ const Card = ({data}) => {
                  
                  <div className="flex items-center justify-evenly  bg-color4 rounded-md text-sm font-thin flex-col w-28 h-28">
                     <h2 className="text-xs">Away</h2>
-                         <Image src={data.teams.away.logo} className="w-12 aspect-square" width={80} height={80} alt="png" />
+                         <Image src={data.teams.away.logo} className="w-12 aspect-square object-contain" width={80} height={80} alt="png" />
                          <p className="text-md font-semibold">{data.teams.away.name}</p>
                  </div>
             </div>

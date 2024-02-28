@@ -28,9 +28,9 @@ const TeamPage = ({ newdata , players}) => {
   return (
     <div 
     className='shadow-xl w-full h-full p-14'
-      style={{
-        background: `linear-gradient(to top left, ${colors ? colors : '#000000'}, #fff , #fff, #fff, #fff , #fff ,${colors ? colors : '#000000'})`,
-      }}
+      // style={{
+      //   background: `linear-gradient(to top left, ${colors ? colors : '#000000'}, #fff , #fff, #fff, #fff , #fff ,${colors ? colors : '#000000'})`,
+      // }}
     >   
      <div className='z-10 rounded-md'>
         <HeaderOfTeam data={newdata} />
