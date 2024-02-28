@@ -22,7 +22,7 @@ export default function DeatailTabs({data , color , players}) {
       }}
     >
        <Tab key="LineUP" title="Line Up">
-        <div  className=" m-auto flex  items-center justify-between flex-col bg-color4 backdrop-blur-md shadow-md rounded-md sm:w-5/6">
+        <div  className=" m-auto flex  items-center justify-between flex-col bg-white shadow-md rounded-md sm:w-5/6">
             <h1 className=" flex items-center justify-around font-ProtestG text-2xl mt-8"> <Image className=" w-8 mr-2" src={data.team.logo} width={300} height={300} alt="png" /> {data.team.name} Line Up</h1>
             <div className=" flex items-center justify-around mt-16 flex-wrap">
               {data.lineups.map(items => <LineUp color={color} data={items} key={items.formation}/>)}
@@ -31,12 +31,12 @@ export default function DeatailTabs({data , color , players}) {
         </div>
         </Tab>
         <Tab key="Goals" title="Goals Stats">
-            <div className="m-auto flex  items-center justify-between flex-col bg-color4  backdrop-blur-md shadow-md rounded-md sm:w-5/6">
+            <div className="m-auto flex  items-center justify-between flex-col bg-white shadow-md rounded-md sm:w-5/6">
                   <GoalDetail data={data}/>
             </div> 
         </Tab>
         <Tab key="Players" title="Players">
-            <div className="m-auto flex  items-center justify-center sm:justify-between flex-wrap bg-color4 backdrop-blur-md shadow-md rounded-md md:w-5/6">
+            <div className="m-auto flex  items-center justify-center sm:justify-between flex-wrap bg-white shadow-md rounded-md md:w-5/6">
                   {players.map((items , index) => <PlayerCard key={index} info={items} color={color}/>)}
             </div> 
         </Tab>

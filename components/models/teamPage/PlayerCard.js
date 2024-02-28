@@ -21,7 +21,7 @@ const PlayerCard = ({info , color}) => {
     }
     return (
        <div className=" rounded-md p-2 w-56 h-40 m-4 flex flex-col items-center justify-around shadow-md" style={{
-           background: `linear-gradient(to top right, #fff , #fff , #fff ,#fff,#fff ,#fff ,${color ? color : '#000000'})`,
+           background: `linear-gradient(to top right, #F5F5F5 , #F5F5F5 , #F5F5F5 ,#F5F5F5,#F5F5F5 ,#F5F5F5 ,${color ? color : '#000000'})`,
          }}>
            <div className="flex items-center justify-center w-full">
                <Image className=" object-cover w-16 rounded-full mr-3" src={info.player.photo} alt="png" width={300} height={300} />

@@ -4,7 +4,7 @@ const HeaderOfTeam = ({data}) => {
     console.log(data);
     return (
         <div className=" relative z-0">
-            <div className="z-70 absolute m-14 shadow-sm p-2 rounded-lg bg-color4 bg-opacity-80 sm:w-auto">
+            <div className="z-70 absolute m-14 shadow-sm p-2 rounded-lg bg-white bg-opacity-80 sm:w-auto">
                 <div className=" flex items-center justify-start">
                     <Image className="w-24" width={300} height={300} src={data.team.logo} alt="logo" />
                     <div className="flex flex-col items-start justify-center ml-4">

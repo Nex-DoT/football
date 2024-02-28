@@ -7,7 +7,7 @@ const GoalDetail = ({data}) => {
                 <div className="flex items-center justify-between flex-wrap">
                   <div className="flex items-center justify-center flex-col mt-5">
                     <h1 className="text-2xl font-thin">ُScored Goals :</h1>
-                      <div className="bg-white flex items-center justify-center m-5 bg-opacity-50 rounded-md shadow-md p-5">
+                      <div className="bg-color4 flex items-center justify-center m-5 bg-opacity-50 rounded-md shadow-md p-5">
                           <div className="flex items-center justify-center flex-col m-3 ">
                               <h2 className="text-xl">Total :</h2>
                               <div className="text-xs sm:text-base">
@@ -29,7 +29,7 @@ const GoalDetail = ({data}) => {
                 
                   <div className="flex items-center justify-center flex-col mt-5">
                       <h1 className="text-2xl font-thin">Received Goals :</h1>
-                      <div className="bg-white flex items-center justify-center m-5 bg-opacity-30 rounded-md shadow-md p-5">
+                      <div className="bg-color4 flex items-center justify-center m-5 bg-opacity-30 rounded-md shadow-md p-5">
                           <div className="flex items-center justify-center flex-col m-3 ">
                               <h2 className="text-xl">Total :</h2>
                               <div className="text-xs sm:text-base">
