@@ -13,7 +13,7 @@ const LeageueCard = () => {
 
                 <div className='text-black flex items-center flex-col bg-white w-full mt-10 pb-10'>
                     <h2 className='text-xl p-3'>If you're looking for games that aren't in these leagues, you can click this button. </h2>
-                    <Link href={`/league`}>
+                    <Link href="/league">
                     <button className=' w-24 h-10 bg-gradient-to-tr font-ProtestG from-color6 to-color7 rounded-md text-black'>Leagues</button>
                     </Link>
                 </div>

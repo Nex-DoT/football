@@ -39,7 +39,7 @@ const GameCards = () => {
               </div>
               <div className='text-white flex items-center flex-col'>
                 <h2 className='text-xl p-3'>If you're looking for games that aren't in these leagues, you can click this button. </h2>
-                <Link href={`/league`}>
+                <Link href="/league">
                    <button className=' w-24 h-10 bg-gradient-to-tr font-ProtestG from-color6 to-color7 rounded-md text-black'>Leagues</button>
                 </Link>
               </div>
