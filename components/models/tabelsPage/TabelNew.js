@@ -47,7 +47,7 @@ const TabelNew = ({data}) => {
                 {(items)=>(
                     <TableRow className="text-xs" key={items.rank}>
                     <TableCell>{items.rank}</TableCell>
-                    <TableCell className="flex items-center justify-start"><Image className=" object-cover" src={items.team.logo} width={30} alt="logo" height={30} />{items.team.name}</TableCell>
+                    <TableCell className="flex items-center justify-start"><Image className="aspect-square object-contain mr-2" src={items.team.logo} width={30} alt="logo" height={30} />{items.team.name}</TableCell>
                     <TableCell>{items.points}</TableCell>
                     <TableCell>{items.all.win}</TableCell>
                     <TableCell>{items.all.draw}</TableCell>

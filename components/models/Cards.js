@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { Button } from "@nextui-org/react";
+import Link from "next/link";
 const Card = ({ data }) => {
  
-
+console.log(data);
     return (
       <div className="card w-72 flex items-center justify-center flex-col h-150 rounded-md  bg-color4 backdrop:blur-md shadow-lg transition-all hover:scale-105">
         <div className="flex flex-col items-center justify-center">
@@ -17,7 +17,7 @@ const Card = ({ data }) => {
                 {data.text.map(( items , index) => <li className=" text-xs" key={index}>{items}</li>)}
               </ul> 
              
-              <button className=" mt-5 bg-gradient-to-tr from-color6 to-color7 p-2 w-24 rounded-md shadow-md font-ProtestG">Details</button>
+              <button className=" mt-5 bg-gradient-to-tr from-color6 to-color7 p-2 w-24 rounded-md shadow-md font-ProtestG"><Link href={data.id}>Details</Link></button>
         </div>
       </div>
     );

@@ -12,8 +12,10 @@ export function data(){
         team:{
             type: "team",
             teams: [
-                {
+                {                       
+                    type: "team",
                     name: "Manchester United",
+                    id: "/team/details/39/33",
                     logo: MNU,
                     text: [
                         "English Premier League",
@@ -23,7 +25,9 @@ export function data(){
                     ]
                 },
                 {
+                    type: "team",
                     name: "Real Madrid",
+                    id: "/team/details/140/541",
                     logo: RLM,
                     text: [
                         "Spanish La Liga",
@@ -33,7 +37,9 @@ export function data(){
                     ]
                 },
                 {
+                    type: "team",
                     name: "FC Barcelona",
+                    id: "/team/details/140/529",
                     logo: FCB,
                     text: [
                         "Spanish La Liga",
@@ -49,7 +55,9 @@ export function data(){
             type: "League",
             league:[
                 {
+                    type: "League",
                     name: "Premier League",
+                    id: "/league/39",
                     logo: PR,
                     text: [
                         "Average Opta Power Ranking: 87.1",
@@ -60,7 +68,9 @@ export function data(){
                     ]
                 },
                 {
+                    type: "League",
                     name: "La Liga",
+                    id: "/league/140",
                     logo: LA,
                     text: [
                         "Average Opta Power Ranking: 83.43",
@@ -71,6 +81,8 @@ export function data(){
                     ]
                 },
                 {
+                    type: "League",
+                    id: "/league/135",
                     name: "Serei A",
                     logo: SA,
                     text: [

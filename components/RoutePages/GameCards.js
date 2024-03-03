@@ -43,7 +43,7 @@ const GameCards = () => {
                    <button className=' w-24 h-10 bg-gradient-to-tr font-ProtestG from-color6 to-color7 rounded-md text-black'>Leagues</button>
                 </Link> */}
                 <button className=' w-24 h-10 bg-gradient-to-tr font-ProtestG from-color6 to-color7 rounded-md text-black'>
-                  <Link href={"/league"}>League</Link>
+                  <Link className='text-black' href={"/league"}>League</Link>
                 </button>
               </div>
             </div>
