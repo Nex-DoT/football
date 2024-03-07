@@ -16,8 +16,8 @@ const GameCards = () => {
       
     },[])
     return (
-        <div className=' h-230 w-full flex items-center relative justify-evenly'>
-             <div className='z-20 w-1/3 flex flex-col justify-evenly h-3/4'>
+        <div className=' md:h-230 w-full flex items-center relative justify-center md:justify-evenly flex-col-reverse md:flex-row '>
+             <div className='z-20 flex flex-col justify-evenly h-3/4 md:flex-col md:flex-wrap'>
                 {data.map( item => <Link key={item.id} onMouseEnter={()=> onMouseHandeler(item.id)} className='flex items-center w-72 hover:opacity-80 transition-opacity' href={`/games/${item.id}`}>
                   <button className=' w-20 h-20 transition-opacity bg-gradient-to-tr from-color6 to-color7 rounded-full m-3 flex items-center justify-center hover:bg-color3 relative'>
                   <Image className=' aspect-square object-contain'  width={50} height={50} src={item.url} alt="png" />
@@ -27,11 +27,11 @@ const GameCards = () => {
                   </Link>
                   )}
             </div>
-            <div className='flex items-center justify-around flex-col h-2/4 bg-color3 rounded-md w-3/4 mr-5 shadow-md p-5'>
+            <div className='md:flex items-center justify-around flex-col h-2/4 bg-color3 rounded-md m-5 md:mr-5 shadow-md p-5'>
               <div className=''>
-                <Image className=' aspect-square m-auto object-contain' width={90} src={image.url} alt='png'/>
-                 <h2 className='text-white font-ProtestG text-2xl'>See the upcoming games for the next 7 days in this leagues.</h2>
-                <ul className=' list-disc text-white p-7'>
+                <Image className=' aspect-square m-auto object-contain hidden md:block' width={80} src={image.url} alt='png'/>
+                 <h2 className='text-white font-ProtestG sm:text-xl '>See the upcoming games for the next 7 days in this leagues.</h2>
+                <ul className=' list-disc text-white m-4'>
                   <li>The date and time of each game</li>
                   <li>The teams playing in each game</li>
                   <li>The location of each game</li>
