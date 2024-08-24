@@ -32,8 +32,8 @@ export async function getServerSideProps(context){
     //     console.error(error);
     // }
     const id = context.query.teamID;
-    const playerUrl = `https://api-football-beta.p.rapidapi.com/players?season=2023&team=${id[1]}`;
-    const teamStatisticsUrl = `https://api-football-beta.p.rapidapi.com/teams/statistics?team=${id[1]}&season=2023&league=${id[0]}`;
+    const playerUrl = `https://api-football-beta.p.rapidapi.com/players?season=2024&team=${id[1]}`;
+    const teamStatisticsUrl = `https://api-football-beta.p.rapidapi.com/teams/statistics?team=${id[1]}&season=2024&league=${id[0]}`;
     const options = {
         headers: {
             'X-RapidAPI-Key': 'c3cb3e2fa7msh47f7d429567cb11p13af7bjsnf69b82aefbb8',
