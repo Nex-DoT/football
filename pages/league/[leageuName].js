@@ -14,7 +14,7 @@ function League({ result }) {
 export default League;
 export async function getServerSideProps({params}){
     const data = params.leageuName
-    const url = `https://api-football-beta.p.rapidapi.com/standings?season=2023&league=${data}`;
+    const url = `https://api-football-beta.p.rapidapi.com/standings?season=2024&league=${data}`;
     const options = {
         method: 'GET',
         headers: {
