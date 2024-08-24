@@ -47,7 +47,7 @@ export async function getServerSideProps(context){
     const today = new Date();
     const dateStrings = getFutureDateString(today);
     const id = params.leagueID ;
-    const url = `https://api-football-beta.p.rapidapi.com/fixtures?timezone=${today.getTimezoneOffset}&season=2023&to=${dateStrings.futureDateString}&league=${id}&from=${dateStrings.currentDateString}`;
+    const url = `https://api-football-beta.p.rapidapi.com/fixtures?timezone=${today.getTimezoneOffset}&season=2024&to=${dateStrings.futureDateString}&league=${id}&from=${dateStrings.currentDateString}`;
     const options = {
         method: 'GET',
         headers: {
